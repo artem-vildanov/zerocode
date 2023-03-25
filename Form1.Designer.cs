@@ -37,12 +37,12 @@
             this.kpp_but = new System.Windows.Forms.Button();
             this.price_but = new System.Windows.Forms.Button();
             this.price_panel = new System.Windows.Forms.Panel();
+            this.accept_price_button = new System.Windows.Forms.Button();
             this.max_price = new System.Windows.Forms.Label();
             this.max_text_box = new System.Windows.Forms.TextBox();
             this.min_price = new System.Windows.Forms.Label();
             this.min_text_box = new System.Windows.Forms.TextBox();
             this.choose_price = new System.Windows.Forms.Label();
-            this.accept_price_button = new System.Windows.Forms.Button();
             this.menu_panel.SuspendLayout();
             this.price_panel.SuspendLayout();
             this.SuspendLayout();
@@ -139,6 +139,16 @@
             this.price_panel.Size = new System.Drawing.Size(744, 524);
             this.price_panel.TabIndex = 1;
             // 
+            // accept_price_button
+            // 
+            this.accept_price_button.Location = new System.Drawing.Point(265, 411);
+            this.accept_price_button.Name = "accept_price_button";
+            this.accept_price_button.Size = new System.Drawing.Size(120, 40);
+            this.accept_price_button.TabIndex = 5;
+            this.accept_price_button.Text = "Подтвердить";
+            this.accept_price_button.UseVisualStyleBackColor = true;
+            this.accept_price_button.Click += new System.EventHandler(this.accept_price_button_Click);
+            // 
             // max_price
             // 
             this.max_price.AutoSize = true;
@@ -180,15 +190,6 @@
             this.choose_price.TabIndex = 0;
             this.choose_price.Text = "Выберите цену";
             // 
-            // accept_price_button
-            // 
-            this.accept_price_button.Location = new System.Drawing.Point(265, 411);
-            this.accept_price_button.Name = "accept_price_button";
-            this.accept_price_button.Size = new System.Drawing.Size(120, 40);
-            this.accept_price_button.TabIndex = 5;
-            this.accept_price_button.Text = "Подтвердить";
-            this.accept_price_button.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +199,7 @@
             this.Controls.Add(this.menu_panel);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.menu_panel.ResumeLayout(false);
             this.price_panel.ResumeLayout(false);
             this.price_panel.PerformLayout();
