@@ -14,19 +14,20 @@ namespace zerocode
     {
         struct car
         {
-            private int minPrice;
-            private int maxPrice;
-            private string GB; //korobka
-            private string rul; // left right
-            private string privod;
-            private double obyem;
-            private string body;
-            private string fuel;
+            public int minPrice;
+            public int maxPrice;
+            public string GB; //korobka
+            public string rul; // left right
+            public string privod;
+            public double obyem;
+            public string body;
+            public string fuel;
         }
 
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -37,6 +38,11 @@ namespace zerocode
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void output_res_but_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

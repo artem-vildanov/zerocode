@@ -70,6 +70,7 @@
             this.output_res_but.TabIndex = 7;
             this.output_res_but.Text = "Вывести результаты";
             this.output_res_but.UseVisualStyleBackColor = true;
+            this.output_res_but.Click += new System.EventHandler(this.output_res_but_Click);
             // 
             // kuzov_but
             // 
