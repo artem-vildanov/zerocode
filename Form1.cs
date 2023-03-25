@@ -57,42 +57,50 @@ namespace zerocode
 
 
 
-
-            TAZ.minPrice = Convert.ToInt32(min_text_box.Text);
-            TAZ.maxPrice = Convert.ToInt32(max_text_box.Text);
-            
-
-            if (radioButton_kuziv_hetchback.Checked) TAZ.body = "Хэтчбек";
-            if (radioButton_kuzov_jeep.Checked) TAZ.body = "Джип";
-            if (radioButton_kuzov_minivan.Checked) TAZ.body = "Минивэн";
-            if (radioButton_kuzov_pickup.Checked) TAZ.body = "Пикап";
-            if (radioButton_kuzov_sedan.Checked) TAZ.body = "Седан";
-
-            string query =
-                "SELECT Mark, Model, Price " +
-                "FROM CAR " +
-                "WHERE " +
-                "(Price BETWEEN @minPrice AND @maxPrice) " +
-                "AND GB = @GB " + "AND Rul = @rul " + "AND Privod = @privod " + "AND Obyem = @obyem " +
-                "AND Body_Type = @body " + "AND Fuel = @fuel";
+            try
+            {
+                TAZ.minPrice = Convert.ToInt32(min_text_box.Text);
+                TAZ.maxPrice = Convert.ToInt32(max_text_box.Text);
 
 
-            OleDbCommand command = new OleDbCommand(query, myConnection);
-            command.Parameters.AddWithValue("@minPrice", TAZ.minPrice);
-            command.Parameters.AddWithValue("@maxPrice", TAZ.maxPrice);
-            command.Parameters.AddWithValue("@GB", TAZ.GB);
-            command.Parameters.AddWithValue("@rul", TAZ.rul);
-            command.Parameters.AddWithValue("@privod", TAZ.privod);
-            command.Parameters.AddWithValue("@obyem", TAZ.obyem);
-            command.Parameters.AddWithValue("@body", TAZ.body);
-            command.Parameters.AddWithValue("@fuel", TAZ.fuel);
+                if (radioButton_kuziv_hetchback.Checked) TAZ.body = "Хэтчбек";
+                if (radioButton_kuzov_jeep.Checked) TAZ.body = "Джип";
+                if (radioButton_kuzov_minivan.Checked) TAZ.body = "Минивэн";
+                if (radioButton_kuzov_pickup.Checked) TAZ.body = "Пикап";
+                if (radioButton_kuzov_sedan.Checked) TAZ.body = "Седан";
 
-            // получаем объект OleDbDataReader для чтения табличного результата запроса SELECT
-            OleDbDataReader reader = command.ExecuteReader();
+                string query =
+                    "SELECT Mark, Model, Price " +
+                    "FROM CAR " +
+                    "WHERE " +
+                    "(Price BETWEEN @minPrice AND @maxPrice) " +
+                    "AND GB = @GB " + "AND Rul = @rul " + "AND Privod = @privod " + "AND Obyem = @obyem " +
+                    "AND Body_Type = @body " + "AND Fuel = @fuel";
 
-            // выполняем запрос и выводим результат в textBox1
-            while (reader.Read())
-                richTextBox1.Text = reader[0] + " " + reader[1] + " " + reader[2] + "\n";
+
+                OleDbCommand command = new OleDbCommand(query, myConnection);
+                command.Parameters.AddWithValue("@minPrice", TAZ.minPrice);
+                command.Parameters.AddWithValue("@maxPrice", TAZ.maxPrice);
+                command.Parameters.AddWithValue("@GB", TAZ.GB);
+                command.Parameters.AddWithValue("@rul", TAZ.rul);
+                command.Parameters.AddWithValue("@privod", TAZ.privod);
+                command.Parameters.AddWithValue("@obyem", TAZ.obyem);
+                command.Parameters.AddWithValue("@body", TAZ.body);
+                command.Parameters.AddWithValue("@fuel", TAZ.fuel);
+
+                // получаем объект OleDbDataReader для чтения табличного результата запроса SELECT
+                OleDbDataReader reader = command.ExecuteReader();
+
+                // выполняем запрос и выводим результат в textBox1
+                while (reader.Read())
+                    richTextBox1.Text = reader[0] + " " + reader[1] + " " + reader[2] + "\n";
+
+            }
+
+            catch
+            {
+                MessageBox.Show("Неверный ввод данных");
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
