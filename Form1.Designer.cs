@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.menu_panel = new System.Windows.Forms.Panel();
-            this.price_but = new System.Windows.Forms.Button();
-            this.kpp_but = new System.Windows.Forms.Button();
-            this.wheel_but = new System.Windows.Forms.Button();
-            this.privod_but = new System.Windows.Forms.Button();
-            this.capacity_but = new System.Windows.Forms.Button();
-            this.kuzov_but = new System.Windows.Forms.Button();
             this.output_res_but = new System.Windows.Forms.Button();
+            this.kuzov_but = new System.Windows.Forms.Button();
+            this.capacity_but = new System.Windows.Forms.Button();
+            this.privod_but = new System.Windows.Forms.Button();
+            this.wheel_but = new System.Windows.Forms.Button();
+            this.kpp_but = new System.Windows.Forms.Button();
+            this.price_but = new System.Windows.Forms.Button();
             this.price_panel = new System.Windows.Forms.Panel();
-            this.choose_price = new System.Windows.Forms.Label();
-            this.min_text_box = new System.Windows.Forms.TextBox();
-            this.min_price = new System.Windows.Forms.Label();
-            this.max_text_box = new System.Windows.Forms.TextBox();
             this.max_price = new System.Windows.Forms.Label();
+            this.max_text_box = new System.Windows.Forms.TextBox();
+            this.min_price = new System.Windows.Forms.Label();
+            this.min_text_box = new System.Windows.Forms.TextBox();
+            this.choose_price = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menu_panel.SuspendLayout();
             this.price_panel.SuspendLayout();
             this.SuspendLayout();
@@ -61,50 +62,14 @@
             this.menu_panel.TabIndex = 0;
             this.menu_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // price_but
+            // output_res_but
             // 
-            this.price_but.Location = new System.Drawing.Point(17, 66);
-            this.price_but.Name = "price_but";
-            this.price_but.Size = new System.Drawing.Size(156, 47);
-            this.price_but.TabIndex = 1;
-            this.price_but.Text = "Цена";
-            this.price_but.UseVisualStyleBackColor = true;
-            // 
-            // kpp_but
-            // 
-            this.kpp_but.Location = new System.Drawing.Point(17, 119);
-            this.kpp_but.Name = "kpp_but";
-            this.kpp_but.Size = new System.Drawing.Size(156, 47);
-            this.kpp_but.TabIndex = 2;
-            this.kpp_but.Text = "Коробка передач";
-            this.kpp_but.UseVisualStyleBackColor = true;
-            // 
-            // wheel_but
-            // 
-            this.wheel_but.Location = new System.Drawing.Point(17, 172);
-            this.wheel_but.Name = "wheel_but";
-            this.wheel_but.Size = new System.Drawing.Size(156, 47);
-            this.wheel_but.TabIndex = 3;
-            this.wheel_but.Text = "Левый/правый руль";
-            this.wheel_but.UseVisualStyleBackColor = true;
-            // 
-            // privod_but
-            // 
-            this.privod_but.Location = new System.Drawing.Point(17, 225);
-            this.privod_but.Name = "privod_but";
-            this.privod_but.Size = new System.Drawing.Size(156, 47);
-            this.privod_but.TabIndex = 4;
-            this.privod_but.Text = "Привод";
-            this.privod_but.UseVisualStyleBackColor = true;
-            // 
-            // capacity_but
-            // 
-            this.capacity_but.Location = new System.Drawing.Point(17, 278);
-            this.capacity_but.Name = "capacity_but";
-            this.capacity_but.Size = new System.Drawing.Size(156, 47);
-            this.capacity_but.TabIndex = 5;
-            this.capacity_but.Text = "Объем двигателя";
-            this.capacity_but.UseVisualStyleBackColor = true;
+            this.output_res_but.Location = new System.Drawing.Point(17, 384);
+            this.output_res_but.Name = "output_res_but";
+            this.output_res_but.Size = new System.Drawing.Size(156, 94);
+            this.output_res_but.TabIndex = 7;
+            this.output_res_but.Text = "Вывести результаты";
+            this.output_res_but.UseVisualStyleBackColor = true;
             // 
             // kuzov_but
             // 
@@ -115,17 +80,54 @@
             this.kuzov_but.Text = "Тип кузова";
             this.kuzov_but.UseVisualStyleBackColor = true;
             // 
-            // output_res_but
+            // capacity_but
             // 
-            this.output_res_but.Location = new System.Drawing.Point(17, 384);
-            this.output_res_but.Name = "output_res_but";
-            this.output_res_but.Size = new System.Drawing.Size(156, 94);
-            this.output_res_but.TabIndex = 7;
-            this.output_res_but.Text = "Вывести результаты";
-            this.output_res_but.UseVisualStyleBackColor = true;
+            this.capacity_but.Location = new System.Drawing.Point(17, 278);
+            this.capacity_but.Name = "capacity_but";
+            this.capacity_but.Size = new System.Drawing.Size(156, 47);
+            this.capacity_but.TabIndex = 5;
+            this.capacity_but.Text = "Объем двигателя";
+            this.capacity_but.UseVisualStyleBackColor = true;
+            // 
+            // privod_but
+            // 
+            this.privod_but.Location = new System.Drawing.Point(17, 225);
+            this.privod_but.Name = "privod_but";
+            this.privod_but.Size = new System.Drawing.Size(156, 47);
+            this.privod_but.TabIndex = 4;
+            this.privod_but.Text = "Привод";
+            this.privod_but.UseVisualStyleBackColor = true;
+            // 
+            // wheel_but
+            // 
+            this.wheel_but.Location = new System.Drawing.Point(17, 172);
+            this.wheel_but.Name = "wheel_but";
+            this.wheel_but.Size = new System.Drawing.Size(156, 47);
+            this.wheel_but.TabIndex = 3;
+            this.wheel_but.Text = "Левый/правый руль";
+            this.wheel_but.UseVisualStyleBackColor = true;
+            // 
+            // kpp_but
+            // 
+            this.kpp_but.Location = new System.Drawing.Point(17, 119);
+            this.kpp_but.Name = "kpp_but";
+            this.kpp_but.Size = new System.Drawing.Size(156, 47);
+            this.kpp_but.TabIndex = 2;
+            this.kpp_but.Text = "Коробка передач";
+            this.kpp_but.UseVisualStyleBackColor = true;
+            // 
+            // price_but
+            // 
+            this.price_but.Location = new System.Drawing.Point(17, 66);
+            this.price_but.Name = "price_but";
+            this.price_but.Size = new System.Drawing.Size(156, 47);
+            this.price_but.TabIndex = 1;
+            this.price_but.Text = "Цена";
+            this.price_but.UseVisualStyleBackColor = true;
             // 
             // price_panel
             // 
+            this.price_panel.Controls.Add(this.label1);
             this.price_panel.Controls.Add(this.max_price);
             this.price_panel.Controls.Add(this.max_text_box);
             this.price_panel.Controls.Add(this.min_price);
@@ -136,21 +138,21 @@
             this.price_panel.Size = new System.Drawing.Size(744, 524);
             this.price_panel.TabIndex = 1;
             // 
-            // choose_price
+            // max_price
             // 
-            this.choose_price.AutoSize = true;
-            this.choose_price.Location = new System.Drawing.Point(292, 225);
-            this.choose_price.Name = "choose_price";
-            this.choose_price.Size = new System.Drawing.Size(83, 13);
-            this.choose_price.TabIndex = 0;
-            this.choose_price.Text = "Выберите цену";
+            this.max_price.AutoSize = true;
+            this.max_price.Location = new System.Drawing.Point(498, 312);
+            this.max_price.Name = "max_price";
+            this.max_price.Size = new System.Drawing.Size(111, 13);
+            this.max_price.TabIndex = 4;
+            this.max_price.Text = "Максимальная цена";
             // 
-            // min_text_box
+            // max_text_box
             // 
-            this.min_text_box.Location = new System.Drawing.Point(54, 331);
-            this.min_text_box.Name = "min_text_box";
-            this.min_text_box.Size = new System.Drawing.Size(155, 20);
-            this.min_text_box.TabIndex = 1;
+            this.max_text_box.Location = new System.Drawing.Point(470, 331);
+            this.max_text_box.Name = "max_text_box";
+            this.max_text_box.Size = new System.Drawing.Size(155, 20);
+            this.max_text_box.TabIndex = 3;
             // 
             // min_price
             // 
@@ -161,21 +163,30 @@
             this.min_price.TabIndex = 2;
             this.min_price.Text = "Минимальная цена";
             // 
-            // max_text_box
+            // min_text_box
             // 
-            this.max_text_box.Location = new System.Drawing.Point(470, 331);
-            this.max_text_box.Name = "max_text_box";
-            this.max_text_box.Size = new System.Drawing.Size(155, 20);
-            this.max_text_box.TabIndex = 3;
+            this.min_text_box.Location = new System.Drawing.Point(54, 331);
+            this.min_text_box.Name = "min_text_box";
+            this.min_text_box.Size = new System.Drawing.Size(155, 20);
+            this.min_text_box.TabIndex = 1;
             // 
-            // max_price
+            // choose_price
             // 
-            this.max_price.AutoSize = true;
-            this.max_price.Location = new System.Drawing.Point(498, 312);
-            this.max_price.Name = "max_price";
-            this.max_price.Size = new System.Drawing.Size(111, 13);
-            this.max_price.TabIndex = 4;
-            this.max_price.Text = "Максимальная цена";
+            this.choose_price.AutoSize = true;
+            this.choose_price.Location = new System.Drawing.Point(292, 225);
+            this.choose_price.Name = "choose_price";
+            this.choose_price.Size = new System.Drawing.Size(83, 13);
+            this.choose_price.TabIndex = 0;
+            this.choose_price.Text = "Выберите цену";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(350, 158);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
             // 
             // Form1
             // 
@@ -209,6 +220,7 @@
         private System.Windows.Forms.TextBox max_text_box;
         private System.Windows.Forms.Label min_price;
         private System.Windows.Forms.TextBox min_text_box;
+        private System.Windows.Forms.Label label1;
     }
 }
 
