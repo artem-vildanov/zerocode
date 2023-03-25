@@ -31,7 +31,7 @@ namespace zerocode
         public static string connectString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database.mdb;";
         private OleDbConnection myConnection;
 
-        
+
         public car_choose()
         {
             InitializeComponent();
@@ -54,21 +54,45 @@ namespace zerocode
             panel_engine.Visible = false;
             panel_output_res.Visible = true;
 
+
+
+
+
             TAZ.minPrice = Convert.ToInt32(min_text_box.Text);
             TAZ.maxPrice = Convert.ToInt32(max_text_box.Text);
+            
 
+            if (radioButton_kuziv_hetchback.Checked) TAZ.body = "Хэтчбек";
+            if (radioButton_kuzov_jeep.Checked) TAZ.body = "Джип";
+            if (radioButton_kuzov_minivan.Checked) TAZ.body = "Минивэн";
+            if (radioButton_kuzov_pickup.Checked) TAZ.body = "Пикап";
+            if (radioButton_kuzov_sedan.Checked) TAZ.body = "Седан";
 
-            string query = "SELECT * FROM CAR WHERE Price BETWEEN @minPrice AND @maxPrice";
+            string query =
+                "SELECT Mark, Model, Price " +
+                "FROM CAR " +
+                "WHERE " +
+                "(Price BETWEEN @minPrice AND @maxPrice) " +
+                "AND GB = @GB " + "AND Rul = @rul " + "AND Privod = @privod " + "AND Obyem = @obyem " +
+                "AND Body_Type = @body " + "AND Fuel = @fuel";
+
 
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.Parameters.AddWithValue("@minPrice", TAZ.minPrice);
             command.Parameters.AddWithValue("@maxPrice", TAZ.maxPrice);
+            command.Parameters.AddWithValue("@GB", TAZ.GB);
+            command.Parameters.AddWithValue("@rul", TAZ.rul);
+            command.Parameters.AddWithValue("@privod", TAZ.privod);
+            command.Parameters.AddWithValue("@obyem", TAZ.obyem);
+            command.Parameters.AddWithValue("@body", TAZ.body);
+            command.Parameters.AddWithValue("@fuel", TAZ.fuel);
+
             // получаем объект OleDbDataReader для чтения табличного результата запроса SELECT
             OleDbDataReader reader = command.ExecuteReader();
 
             // выполняем запрос и выводим результат в textBox1
-            while(reader.Read())
-                Console.WriteLine(reader[1] + " " + reader[2]);
+            while (reader.Read())
+                richTextBox1.Text = reader[0] + " " + reader[1] + " " + reader[2] + "\n";
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -165,6 +189,7 @@ namespace zerocode
         private void trackBar_obyom_switch_Scroll(object sender, EventArgs e)
         {
             textBox_obyom_switch.Text = Convert.ToString(Convert.ToDouble(trackBar_obyom_switch.Value) / 10);
+            TAZ.obyem = Convert.ToDouble(trackBar_obyom_switch.Value) / 10;
         }
 
         private void textBox_obyom_switch_TextChanged(object sender, EventArgs e)
@@ -172,39 +197,39 @@ namespace zerocode
             //trackBar_obyom_switch.Value = Convert.ToInt32(Convert.ToDouble(textBox_obyom_switch.Text)*10);
         }
 
-        private void radioButton_kuzov_sedan_CheckedChanged(object sender, EventArgs e)
-        {
+        //private void radioButton_kuzov_sedan_CheckedChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void radioButton_kuziv_hetchback_CheckedChanged(object sender, EventArgs e)
-        {
+        //private void radioButton_kuziv_hetchback_CheckedChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void radioButton_kuzov_pickup_CheckedChanged(object sender, EventArgs e)
-        {
+        //private void radioButton_kuzov_pickup_CheckedChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
-        private void radioButton_kuzov_minivan_CheckedChanged(object sender, EventArgs e)
-        {
+        //private void radioButton_kuzov_minivan_CheckedChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void button_engine_electro_Click(object sender, EventArgs e)
         {
-
+            TAZ.fuel = "Электро";
         }
 
         private void button_engine_petrol_Click(object sender, EventArgs e)
         {
-
+            TAZ.fuel = "Бензин";
         }
 
         private void button_engine_disel_Click(object sender, EventArgs e)
         {
-
+            TAZ.fuel = "Дизель";
         }
 
         private void button_begin_Click(object sender, EventArgs e)
@@ -212,6 +237,39 @@ namespace zerocode
             panel_startpage.Visible = false;
         }
 
+        private void button_kpp_m_Click(object sender, EventArgs e)
+        {
+            TAZ.GB = "Механика";
+        }
 
+        private void button_kpp_a_Click(object sender, EventArgs e)
+        {
+            TAZ.GB = "Автомат";
+        }
+
+        private void button_fwd_Click(object sender, EventArgs e)
+        {
+            TAZ.privod = "FWD";
+        }
+
+        private void button_rwd_Click(object sender, EventArgs e)
+        {
+            TAZ.privod = "RWD";
+        }
+
+        private void button_4wd_Click(object sender, EventArgs e)
+        {
+            TAZ.privod = "4WD";
+        }
+
+        private void button_left_rul_Click(object sender, EventArgs e)
+        {
+            TAZ.rul = "Левый";
+        }
+
+        private void button_right_rul_Click(object sender, EventArgs e)
+        {
+            TAZ.rul = "Правый";
+        }
     }
 }

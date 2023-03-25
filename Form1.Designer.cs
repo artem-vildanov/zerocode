@@ -247,9 +247,9 @@
             this.panel_kpp.Controls.Add(this.button_kpp_a);
             this.panel_kpp.Controls.Add(this.button_kpp_m);
             this.panel_kpp.Controls.Add(this.label_kpp);
-            this.panel_kpp.Location = new System.Drawing.Point(188, -30);
+            this.panel_kpp.Location = new System.Drawing.Point(186, -30);
             this.panel_kpp.Name = "panel_kpp";
-            this.panel_kpp.Size = new System.Drawing.Size(741, 524);
+            this.panel_kpp.Size = new System.Drawing.Size(743, 524);
             this.panel_kpp.TabIndex = 2;
             // 
             // button_kpp_a
@@ -261,6 +261,7 @@
             this.button_kpp_a.TabIndex = 2;
             this.button_kpp_a.Text = "автомат";
             this.button_kpp_a.UseVisualStyleBackColor = true;
+            this.button_kpp_a.Click += new System.EventHandler(this.button_kpp_a_Click);
             // 
             // button_kpp_m
             // 
@@ -271,6 +272,7 @@
             this.button_kpp_m.TabIndex = 1;
             this.button_kpp_m.Text = "механика";
             this.button_kpp_m.UseVisualStyleBackColor = true;
+            this.button_kpp_m.Click += new System.EventHandler(this.button_kpp_m_Click);
             // 
             // label_kpp
             // 
@@ -288,9 +290,9 @@
             this.panel_rul.Controls.Add(this.button_right_rul);
             this.panel_rul.Controls.Add(this.button_left_rul);
             this.panel_rul.Controls.Add(this.label_rul);
-            this.panel_rul.Location = new System.Drawing.Point(188, -30);
+            this.panel_rul.Location = new System.Drawing.Point(186, -30);
             this.panel_rul.Name = "panel_rul";
-            this.panel_rul.Size = new System.Drawing.Size(741, 524);
+            this.panel_rul.Size = new System.Drawing.Size(743, 524);
             this.panel_rul.TabIndex = 3;
             // 
             // button_right_rul
@@ -302,6 +304,7 @@
             this.button_right_rul.TabIndex = 2;
             this.button_right_rul.Text = "Правый руль";
             this.button_right_rul.UseVisualStyleBackColor = true;
+            this.button_right_rul.Click += new System.EventHandler(this.button_right_rul_Click);
             // 
             // button_left_rul
             // 
@@ -312,6 +315,7 @@
             this.button_left_rul.TabIndex = 1;
             this.button_left_rul.Text = "Левый руль";
             this.button_left_rul.UseVisualStyleBackColor = true;
+            this.button_left_rul.Click += new System.EventHandler(this.button_left_rul_Click);
             // 
             // label_rul
             // 
@@ -329,9 +333,9 @@
             this.panel_privod.Controls.Add(this.button_4wd);
             this.panel_privod.Controls.Add(this.button_fwd);
             this.panel_privod.Controls.Add(this.label_privod);
-            this.panel_privod.Location = new System.Drawing.Point(188, -30);
+            this.panel_privod.Location = new System.Drawing.Point(186, -30);
             this.panel_privod.Name = "panel_privod";
-            this.panel_privod.Size = new System.Drawing.Size(740, 524);
+            this.panel_privod.Size = new System.Drawing.Size(742, 524);
             this.panel_privod.TabIndex = 4;
             // 
             // button_rwd
@@ -343,6 +347,7 @@
             this.button_rwd.TabIndex = 3;
             this.button_rwd.Text = "Задний привод";
             this.button_rwd.UseVisualStyleBackColor = true;
+            this.button_rwd.Click += new System.EventHandler(this.button_rwd_Click);
             // 
             // button_4wd
             // 
@@ -353,6 +358,7 @@
             this.button_4wd.TabIndex = 2;
             this.button_4wd.Text = "Полный привод";
             this.button_4wd.UseVisualStyleBackColor = true;
+            this.button_4wd.Click += new System.EventHandler(this.button_4wd_Click);
             // 
             // button_fwd
             // 
@@ -363,6 +369,7 @@
             this.button_fwd.TabIndex = 1;
             this.button_fwd.Text = "Передний привод";
             this.button_fwd.UseVisualStyleBackColor = true;
+            this.button_fwd.Click += new System.EventHandler(this.button_fwd_Click);
             // 
             // label_privod
             // 
@@ -379,9 +386,9 @@
             this.panel_obyom.Controls.Add(this.textBox_obyom_switch);
             this.panel_obyom.Controls.Add(this.trackBar_obyom_switch);
             this.panel_obyom.Controls.Add(this.label_ob);
-            this.panel_obyom.Location = new System.Drawing.Point(189, -30);
+            this.panel_obyom.Location = new System.Drawing.Point(186, -30);
             this.panel_obyom.Name = "panel_obyom";
-            this.panel_obyom.Size = new System.Drawing.Size(740, 524);
+            this.panel_obyom.Size = new System.Drawing.Size(743, 524);
             this.panel_obyom.TabIndex = 5;
             // 
             // textBox_obyom_switch
@@ -418,9 +425,9 @@
             this.panel_kuzov.Controls.Add(this.radioButton_kuzov_jeep);
             this.panel_kuzov.Controls.Add(this.radioButton_kuzov_sedan);
             this.panel_kuzov.Controls.Add(this.label1);
-            this.panel_kuzov.Location = new System.Drawing.Point(189, -30);
+            this.panel_kuzov.Location = new System.Drawing.Point(186, -30);
             this.panel_kuzov.Name = "panel_kuzov";
-            this.panel_kuzov.Size = new System.Drawing.Size(738, 524);
+            this.panel_kuzov.Size = new System.Drawing.Size(741, 524);
             this.panel_kuzov.TabIndex = 6;
             // 
             // radioButton_kuzov_minivan
@@ -434,7 +441,7 @@
             this.radioButton_kuzov_minivan.TabStop = true;
             this.radioButton_kuzov_minivan.Text = "Минивэн";
             this.radioButton_kuzov_minivan.UseVisualStyleBackColor = true;
-            this.radioButton_kuzov_minivan.CheckedChanged += new System.EventHandler(this.radioButton_kuzov_minivan_CheckedChanged);
+            //this.radioButton_kuzov_minivan.CheckedChanged += new System.EventHandler(this.radioButton_kuzov_minivan_CheckedChanged);
             // 
             // radioButton_kuzov_pickup
             // 
@@ -447,7 +454,7 @@
             this.radioButton_kuzov_pickup.TabStop = true;
             this.radioButton_kuzov_pickup.Text = "Пикап";
             this.radioButton_kuzov_pickup.UseVisualStyleBackColor = true;
-            this.radioButton_kuzov_pickup.CheckedChanged += new System.EventHandler(this.radioButton_kuzov_pickup_CheckedChanged);
+            //this.radioButton_kuzov_pickup.CheckedChanged += new System.EventHandler(this.radioButton_kuzov_pickup_CheckedChanged);
             // 
             // radioButton_kuziv_hetchback
             // 
@@ -460,7 +467,7 @@
             this.radioButton_kuziv_hetchback.TabStop = true;
             this.radioButton_kuziv_hetchback.Text = "Хэтчбек";
             this.radioButton_kuziv_hetchback.UseVisualStyleBackColor = true;
-            this.radioButton_kuziv_hetchback.CheckedChanged += new System.EventHandler(this.radioButton_kuziv_hetchback_CheckedChanged);
+            //this.radioButton_kuziv_hetchback.CheckedChanged += new System.EventHandler(this.radioButton_kuziv_hetchback_CheckedChanged);
             // 
             // radioButton_kuzov_jeep
             // 
@@ -485,7 +492,7 @@
             this.radioButton_kuzov_sedan.TabStop = true;
             this.radioButton_kuzov_sedan.Text = "Седан";
             this.radioButton_kuzov_sedan.UseVisualStyleBackColor = true;
-            this.radioButton_kuzov_sedan.CheckedChanged += new System.EventHandler(this.radioButton_kuzov_sedan_CheckedChanged);
+            //this.radioButton_kuzov_sedan.CheckedChanged += new System.EventHandler(this.radioButton_kuzov_sedan_CheckedChanged);
             // 
             // label1
             // 
@@ -503,9 +510,9 @@
             this.panel_engine.Controls.Add(this.button_engine_petrol);
             this.panel_engine.Controls.Add(this.button_engine_electro);
             this.panel_engine.Controls.Add(this.label2);
-            this.panel_engine.Location = new System.Drawing.Point(190, -30);
+            this.panel_engine.Location = new System.Drawing.Point(186, -30);
             this.panel_engine.Name = "panel_engine";
-            this.panel_engine.Size = new System.Drawing.Size(739, 524);
+            this.panel_engine.Size = new System.Drawing.Size(743, 524);
             this.panel_engine.TabIndex = 7;
             // 
             // button_engine_disel
@@ -555,9 +562,9 @@
             // 
             this.panel_output_res.Controls.Add(this.label3);
             this.panel_output_res.Controls.Add(this.richTextBox1);
-            this.panel_output_res.Location = new System.Drawing.Point(190, -30);
+            this.panel_output_res.Location = new System.Drawing.Point(186, -30);
             this.panel_output_res.Name = "panel_output_res";
-            this.panel_output_res.Size = new System.Drawing.Size(739, 524);
+            this.panel_output_res.Size = new System.Drawing.Size(743, 524);
             this.panel_output_res.TabIndex = 8;
             // 
             // label3
