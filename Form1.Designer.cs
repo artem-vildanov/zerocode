@@ -42,7 +42,7 @@
             this.min_price = new System.Windows.Forms.Label();
             this.min_text_box = new System.Windows.Forms.TextBox();
             this.choose_price = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.accept_price_button = new System.Windows.Forms.Button();
             this.menu_panel.SuspendLayout();
             this.price_panel.SuspendLayout();
             this.SuspendLayout();
@@ -127,7 +127,7 @@
             // 
             // price_panel
             // 
-            this.price_panel.Controls.Add(this.label1);
+            this.price_panel.Controls.Add(this.accept_price_button);
             this.price_panel.Controls.Add(this.max_price);
             this.price_panel.Controls.Add(this.max_text_box);
             this.price_panel.Controls.Add(this.min_price);
@@ -179,14 +179,14 @@
             this.choose_price.TabIndex = 0;
             this.choose_price.Text = "Выберите цену";
             // 
-            // label1
+            // accept_price_button
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(350, 158);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.accept_price_button.Location = new System.Drawing.Point(265, 411);
+            this.accept_price_button.Name = "accept_price_button";
+            this.accept_price_button.Size = new System.Drawing.Size(120, 40);
+            this.accept_price_button.TabIndex = 5;
+            this.accept_price_button.Text = "Подтвердить";
+            this.accept_price_button.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -220,7 +220,7 @@
         private System.Windows.Forms.TextBox max_text_box;
         private System.Windows.Forms.Label min_price;
         private System.Windows.Forms.TextBox min_text_box;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button accept_price_button;
     }
 }
 
