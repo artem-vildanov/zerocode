@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace zerocode
 {
-    public partial class Form1 : Form
+    public partial class car_choose : Form
     {
         struct car
         {
@@ -32,7 +32,7 @@ namespace zerocode
         private OleDbConnection myConnection;
 
         
-        public Form1()
+        public car_choose()
         {
             InitializeComponent();
 
@@ -43,18 +43,17 @@ namespace zerocode
             myConnection.Open();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void price_but_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void output_res_but_Click(object sender, EventArgs e)
         {
+            panel_price.Visible = false;
+            panel_kpp.Visible = false;
+            panel_rul.Visible = false;
+            panel_privod.Visible = false;
+            panel_obyom.Visible = false;
+            panel_kuzov.Visible = false;
+            panel_engine.Visible = false;
+            panel_output_res.Visible = true;
+
             TAZ.minPrice = Convert.ToInt32(min_text_box.Text);
             TAZ.maxPrice = Convert.ToInt32(max_text_box.Text);
 
@@ -72,18 +71,147 @@ namespace zerocode
                 Console.WriteLine(reader[1] + " " + reader[2]);
         }
 
-        private void accept_price_button_Click(object sender, EventArgs e)
-        {
-            
-
-            
-
-        }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             // заркываем соединение с БД
             myConnection.Close();
         }
+
+        private void price_but_Click(object sender, EventArgs e)
+        {
+            panel_price.Visible = true;
+            panel_kpp.Visible = false;
+            panel_rul.Visible = false;
+            panel_privod.Visible = false;
+            panel_obyom.Visible = false;
+            panel_kuzov.Visible = false;
+            panel_engine.Visible = false;
+            panel_output_res.Visible = false;
+        }
+
+
+        private void kpp_but_Click(object sender, EventArgs e)
+        {
+            panel_price.Visible = false;
+            panel_kpp.Visible = true;
+            panel_rul.Visible = false;
+            panel_privod.Visible = false;
+            panel_obyom.Visible = false;
+            panel_kuzov.Visible = false;
+            panel_engine.Visible = false;
+            panel_output_res.Visible = false;
+        }
+
+        private void rul_but_Click(object sender, EventArgs e)
+        {
+            panel_price.Visible = false;
+            panel_kpp.Visible = false;
+            panel_rul.Visible = true;
+            panel_privod.Visible = false;
+            panel_obyom.Visible = false;
+            panel_kuzov.Visible = false;
+            panel_engine.Visible = false;
+            panel_output_res.Visible = false;
+        }
+
+        private void privod_but_Click(object sender, EventArgs e)
+        {
+            panel_price.Visible = false;
+            panel_kpp.Visible = false;
+            panel_rul.Visible = false;
+            panel_privod.Visible = true;
+            panel_obyom.Visible = false;
+            panel_kuzov.Visible = false;
+            panel_engine.Visible = false;
+            panel_output_res.Visible = false;
+        }
+
+        private void obyom_but_Click(object sender, EventArgs e)
+        {
+            panel_price.Visible = false;
+            panel_kpp.Visible = false;
+            panel_rul.Visible = false;
+            panel_privod.Visible = false;
+            panel_obyom.Visible = true;
+            panel_kuzov.Visible = false;
+            panel_engine.Visible = false;
+            panel_output_res.Visible = false;
+        }
+
+        private void kuzov_but_Click(object sender, EventArgs e)
+        {
+            panel_price.Visible = false;
+            panel_kpp.Visible = false;
+            panel_rul.Visible = false;
+            panel_privod.Visible = false;
+            panel_obyom.Visible = false;
+            panel_kuzov.Visible = true;
+            panel_engine.Visible = false;
+            panel_output_res.Visible = false;
+        }
+
+        private void engine_but_Click(object sender, EventArgs e)
+        {
+            panel_price.Visible = false;
+            panel_kpp.Visible = false;
+            panel_rul.Visible = false;
+            panel_privod.Visible = false;
+            panel_obyom.Visible = false;
+            panel_kuzov.Visible = false;
+            panel_engine.Visible = true;
+            panel_output_res.Visible = false;
+        }
+
+        private void trackBar_obyom_switch_Scroll(object sender, EventArgs e)
+        {
+            textBox_obyom_switch.Text = Convert.ToString(Convert.ToDouble(trackBar_obyom_switch.Value) / 10);
+        }
+
+        private void textBox_obyom_switch_TextChanged(object sender, EventArgs e)
+        {
+            //trackBar_obyom_switch.Value = Convert.ToInt32(Convert.ToDouble(textBox_obyom_switch.Text)*10);
+        }
+
+        private void radioButton_kuzov_sedan_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_kuziv_hetchback_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_kuzov_pickup_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_kuzov_minivan_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_engine_electro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_engine_petrol_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_engine_disel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_begin_Click(object sender, EventArgs e)
+        {
+            panel_startpage.Visible = false;
+        }
+
+
     }
 }
