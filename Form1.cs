@@ -58,7 +58,7 @@ namespace zerocode
             TAZ.maxPrice = Convert.ToInt32(max_text_box.Text);
 
 
-            string query = "SELECT * FROM CAR WHERE Price between @minPrice and @maxPrice";
+            string query = "SELECT * FROM CAR WHERE Price BETWEEN @minPrice AND @maxPrice";
 
             OleDbCommand command = new OleDbCommand(query, myConnection);
             command.Parameters.AddWithValue("@minPrice", TAZ.minPrice);
