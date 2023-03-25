@@ -60,7 +60,6 @@
             this.menu_panel.Name = "menu_panel";
             this.menu_panel.Size = new System.Drawing.Size(192, 524);
             this.menu_panel.TabIndex = 0;
-            this.menu_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // output_res_but
             // 
@@ -125,6 +124,7 @@
             this.price_but.TabIndex = 1;
             this.price_but.Text = "Цена";
             this.price_but.UseVisualStyleBackColor = true;
+            this.price_but.Click += new System.EventHandler(this.price_but_Click);
             // 
             // price_panel
             // 
