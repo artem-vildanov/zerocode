@@ -92,8 +92,13 @@ namespace zerocode
                 OleDbDataReader reader = command.ExecuteReader();
 
                 // выполняем запрос и выводим результат в textBox1
+                richTextBox1.Text += "МАРКА МОДЕЛЬ\t\tЦЕНА\n";
                 while (reader.Read())
-                    richTextBox1.Text = reader[0] + " " + reader[1] + " " + reader[2] + "\n";
+                {
+                    
+                    richTextBox1.Text += reader[0] + " " + reader[1] + "\t\t" + reader[2] + " руб.\n";
+                }
+                    
 
             }
 
