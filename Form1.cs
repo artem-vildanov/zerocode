@@ -92,11 +92,12 @@ namespace zerocode
                 OleDbDataReader reader = command.ExecuteReader();
 
                 // выполняем запрос и выводим результат в textBox1
-                richTextBox1.Text += "МАРКА МОДЕЛЬ\t\tЦЕНА\n";
+                richTextBox1.Text = "";
+                richTextBox1.Text += "МАРКА МОДЕЛЬ\tЦЕНА\n";
                 while (reader.Read())
                 {
                     
-                    richTextBox1.Text += reader[0] + " " + reader[1] + "\t\t" + reader[2] + " руб.\n";
+                    richTextBox1.Text += reader[0] + " " + reader[1] + "\t\t\t" + reader[2] + " руб.\n";
                 }
                     
 
@@ -283,6 +284,11 @@ namespace zerocode
         private void button_right_rul_Click(object sender, EventArgs e)
         {
             TAZ.rul = "Правый";
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

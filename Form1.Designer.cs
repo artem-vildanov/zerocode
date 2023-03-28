@@ -204,7 +204,7 @@
             this.label_max_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_max_price.Location = new System.Drawing.Point(434, 225);
             this.label_max_price.Name = "label_max_price";
-            this.label_max_price.Size = new System.Drawing.Size(206, 24);
+            this.label_max_price.Size = new System.Drawing.Size(195, 20);
             this.label_max_price.TabIndex = 4;
             this.label_max_price.Text = "Максимальная цена";
             // 
@@ -221,7 +221,7 @@
             this.label_min_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_min_price.Location = new System.Drawing.Point(113, 225);
             this.label_min_price.Name = "label_min_price";
-            this.label_min_price.Size = new System.Drawing.Size(198, 24);
+            this.label_min_price.Size = new System.Drawing.Size(186, 20);
             this.label_min_price.TabIndex = 2;
             this.label_min_price.Text = "Минимальная цена";
             // 
@@ -238,7 +238,7 @@
             this.label_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_price.Location = new System.Drawing.Point(183, 163);
             this.label_price.Name = "label_price";
-            this.label_price.Size = new System.Drawing.Size(337, 29);
+            this.label_price.Size = new System.Drawing.Size(297, 26);
             this.label_price.TabIndex = 0;
             this.label_price.Text = "Выберите диапазон цены";
             // 
@@ -280,7 +280,7 @@
             this.label_kpp.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_kpp.Location = new System.Drawing.Point(88, 55);
             this.label_kpp.Name = "label_kpp";
-            this.label_kpp.Size = new System.Drawing.Size(508, 58);
+            this.label_kpp.Size = new System.Drawing.Size(446, 52);
             this.label_kpp.TabIndex = 0;
             this.label_kpp.Text = "Выберите, какой тип коробки передач \r\nвас интересует\r\n";
             this.label_kpp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,7 +323,7 @@
             this.label_rul.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_rul.Location = new System.Drawing.Point(113, 84);
             this.label_rul.Name = "label_rul";
-            this.label_rul.Size = new System.Drawing.Size(538, 29);
+            this.label_rul.Size = new System.Drawing.Size(473, 26);
             this.label_rul.TabIndex = 0;
             this.label_rul.Text = "Выберите, какой тип руля вам интересен";
             // 
@@ -377,7 +377,7 @@
             this.label_privod.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_privod.Location = new System.Drawing.Point(61, 84);
             this.label_privod.Name = "label_privod";
-            this.label_privod.Size = new System.Drawing.Size(590, 29);
+            this.label_privod.Size = new System.Drawing.Size(518, 26);
             this.label_privod.TabIndex = 0;
             this.label_privod.Text = "Выберите, какой тип привода вас интересует";
             // 
@@ -403,7 +403,7 @@
             this.trackBar_obyom_switch.Location = new System.Drawing.Point(195, 195);
             this.trackBar_obyom_switch.Maximum = 100;
             this.trackBar_obyom_switch.Name = "trackBar_obyom_switch";
-            this.trackBar_obyom_switch.Size = new System.Drawing.Size(328, 50);
+            this.trackBar_obyom_switch.Size = new System.Drawing.Size(328, 45);
             this.trackBar_obyom_switch.TabIndex = 2;
             this.trackBar_obyom_switch.Scroll += new System.EventHandler(this.trackBar_obyom_switch_Scroll);
             // 
@@ -413,7 +413,7 @@
             this.label_ob.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_ob.Location = new System.Drawing.Point(80, 84);
             this.label_ob.Name = "label_ob";
-            this.label_ob.Size = new System.Drawing.Size(557, 29);
+            this.label_ob.Size = new System.Drawing.Size(491, 26);
             this.label_ob.TabIndex = 1;
             this.label_ob.Text = "Какой объем (л) двигателя вас интересует";
             // 
@@ -436,12 +436,11 @@
             this.radioButton_kuzov_minivan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_kuzov_minivan.Location = new System.Drawing.Point(487, 127);
             this.radioButton_kuzov_minivan.Name = "radioButton_kuzov_minivan";
-            this.radioButton_kuzov_minivan.Size = new System.Drawing.Size(109, 28);
+            this.radioButton_kuzov_minivan.Size = new System.Drawing.Size(101, 24);
             this.radioButton_kuzov_minivan.TabIndex = 5;
             this.radioButton_kuzov_minivan.TabStop = true;
             this.radioButton_kuzov_minivan.Text = "Минивэн";
             this.radioButton_kuzov_minivan.UseVisualStyleBackColor = true;
-            //this.radioButton_kuzov_minivan.CheckedChanged += new System.EventHandler(this.radioButton_kuzov_minivan_CheckedChanged);
             // 
             // radioButton_kuzov_pickup
             // 
@@ -449,12 +448,11 @@
             this.radioButton_kuzov_pickup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_kuzov_pickup.Location = new System.Drawing.Point(401, 127);
             this.radioButton_kuzov_pickup.Name = "radioButton_kuzov_pickup";
-            this.radioButton_kuzov_pickup.Size = new System.Drawing.Size(82, 28);
+            this.radioButton_kuzov_pickup.Size = new System.Drawing.Size(79, 24);
             this.radioButton_kuzov_pickup.TabIndex = 4;
             this.radioButton_kuzov_pickup.TabStop = true;
             this.radioButton_kuzov_pickup.Text = "Пикап";
             this.radioButton_kuzov_pickup.UseVisualStyleBackColor = true;
-            //this.radioButton_kuzov_pickup.CheckedChanged += new System.EventHandler(this.radioButton_kuzov_pickup_CheckedChanged);
             // 
             // radioButton_kuziv_hetchback
             // 
@@ -462,12 +460,11 @@
             this.radioButton_kuziv_hetchback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_kuziv_hetchback.Location = new System.Drawing.Point(217, 127);
             this.radioButton_kuziv_hetchback.Name = "radioButton_kuziv_hetchback";
-            this.radioButton_kuziv_hetchback.Size = new System.Drawing.Size(101, 28);
+            this.radioButton_kuziv_hetchback.Size = new System.Drawing.Size(98, 24);
             this.radioButton_kuziv_hetchback.TabIndex = 3;
             this.radioButton_kuziv_hetchback.TabStop = true;
             this.radioButton_kuziv_hetchback.Text = "Хэтчбек";
             this.radioButton_kuziv_hetchback.UseVisualStyleBackColor = true;
-            //this.radioButton_kuziv_hetchback.CheckedChanged += new System.EventHandler(this.radioButton_kuziv_hetchback_CheckedChanged);
             // 
             // radioButton_kuzov_jeep
             // 
@@ -475,7 +472,7 @@
             this.radioButton_kuzov_jeep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_kuzov_jeep.Location = new System.Drawing.Point(319, 127);
             this.radioButton_kuzov_jeep.Name = "radioButton_kuzov_jeep";
-            this.radioButton_kuzov_jeep.Size = new System.Drawing.Size(78, 28);
+            this.radioButton_kuzov_jeep.Size = new System.Drawing.Size(72, 24);
             this.radioButton_kuzov_jeep.TabIndex = 2;
             this.radioButton_kuzov_jeep.TabStop = true;
             this.radioButton_kuzov_jeep.Text = "Джип";
@@ -487,12 +484,11 @@
             this.radioButton_kuzov_sedan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radioButton_kuzov_sedan.Location = new System.Drawing.Point(129, 126);
             this.radioButton_kuzov_sedan.Name = "radioButton_kuzov_sedan";
-            this.radioButton_kuzov_sedan.Size = new System.Drawing.Size(85, 28);
+            this.radioButton_kuzov_sedan.Size = new System.Drawing.Size(81, 24);
             this.radioButton_kuzov_sedan.TabIndex = 1;
             this.radioButton_kuzov_sedan.TabStop = true;
             this.radioButton_kuzov_sedan.Text = "Седан";
             this.radioButton_kuzov_sedan.UseVisualStyleBackColor = true;
-            //this.radioButton_kuzov_sedan.CheckedChanged += new System.EventHandler(this.radioButton_kuzov_sedan_CheckedChanged);
             // 
             // label1
             // 
@@ -500,7 +496,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(212, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 29);
+            this.label1.Size = new System.Drawing.Size(248, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Выберите тип кузова";
             // 
@@ -554,7 +550,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(142, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(463, 29);
+            this.label2.Size = new System.Drawing.Size(410, 26);
             this.label2.TabIndex = 0;
             this.label2.Text = "Выберите желаемый тип двигателя";
             // 
@@ -573,26 +569,28 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(46, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(649, 29);
+            this.label3.Size = new System.Drawing.Size(570, 26);
             this.label3.TabIndex = 1;
             this.label3.Text = "Доступные варианты по вашим критериям поиска";
             // 
             // richTextBox1
             // 
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.richTextBox1.Location = new System.Drawing.Point(51, 151);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(639, 319);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // panel_startpage
             // 
             this.panel_startpage.Controls.Add(this.button_begin);
             this.panel_startpage.Controls.Add(this.label4);
-            this.panel_startpage.Location = new System.Drawing.Point(-5, -30);
+            this.panel_startpage.Location = new System.Drawing.Point(-2, -30);
             this.panel_startpage.Name = "panel_startpage";
-            this.panel_startpage.Size = new System.Drawing.Size(931, 524);
+            this.panel_startpage.Size = new System.Drawing.Size(928, 524);
             this.panel_startpage.TabIndex = 9;
             // 
             // button_begin
@@ -612,7 +610,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.73585F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(55, 174);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(820, 111);
+            this.label4.Size = new System.Drawing.Size(785, 99);
             this.label4.TabIndex = 0;
             this.label4.Text = "Приветствуем вас в нашей системе по подбору авто!\r\nЧтобы начать, нажмите НАЧАТЬ\r\n" +
     "\r\n";
