@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
 namespace zerocode
 {
     public partial class car_choose : Form
@@ -24,6 +25,7 @@ namespace zerocode
             public double obyem;
             public string body;
             public string fuel;
+
         }
 
         car TAZ;
@@ -41,6 +43,14 @@ namespace zerocode
 
             // открываем соединение с БД
             myConnection.Open();
+
+            TAZ.GB = string.Empty;
+            TAZ.rul = string.Empty;
+            TAZ.privod = string.Empty;
+            TAZ.obyem = -1;
+            TAZ.body = string.Empty;
+            TAZ.fuel = string.Empty;
+
         }
 
         private void output_res_but_Click(object sender, EventArgs e)
@@ -57,11 +67,10 @@ namespace zerocode
 
 
 
-            try
-            {
+            //try
+            //{
                 TAZ.minPrice = Convert.ToInt32(min_text_box.Text);
                 TAZ.maxPrice = Convert.ToInt32(max_text_box.Text);
-
 
                 if (radioButton_kuziv_hetchback.Checked) TAZ.body = "Хэтчбек";
                 if (radioButton_kuzov_jeep.Checked) TAZ.body = "Джип";
@@ -69,16 +78,43 @@ namespace zerocode
                 if (radioButton_kuzov_pickup.Checked) TAZ.body = "Пикап";
                 if (radioButton_kuzov_sedan.Checked) TAZ.body = "Седан";
 
+
+
+
                 string query =
                     "SELECT Mark, Model, Price " +
                     "FROM CAR " +
                     "WHERE " +
-                    "(Price BETWEEN @minPrice AND @maxPrice) " +
-                    "AND GB = @GB " + "AND Rul = @rul " + "AND Privod = @privod " + "AND Obyem = @obyem " +
-                    "AND Body_Type = @body " + "AND Fuel = @fuel";
+                    "(Price BETWEEN @minPrice AND @maxPrice) ";
+                //+
+                //"AND GB = @GB " + "AND Rul = @rul " + "AND Privod = @privod " + "AND Obyem = @obyem " +
+                //"AND Body_Type = @body " + "AND Fuel = @fuel";
+
+                if (!string.IsNullOrEmpty(TAZ.GB))
+                    query += "AND GB = @GB ";
+
+                if (!string.IsNullOrEmpty(TAZ.rul))
+                    query += "AND Rul = @rul ";
+
+                if (!string.IsNullOrEmpty(TAZ.privod))
+                    query += "AND Privod = @privod ";
+
+                if (!string.IsNullOrEmpty(TAZ.rul))
+                    query += "AND Rul = @rul ";
+                
+                if (TAZ.obyem != -1)
+                    query += "AND Obyem = @obyem ";
+
+                if (!string.IsNullOrEmpty(TAZ.body))
+                    query += "AND Body_Type = @body ";
+
+                if (!string.IsNullOrEmpty(TAZ.fuel))
+                    query += "AND Fuel = @fuel ";
 
 
+               // OleDbCommand czxc = new OleDbCommand()
                 OleDbCommand command = new OleDbCommand(query, myConnection);
+                
                 command.Parameters.AddWithValue("@minPrice", TAZ.minPrice);
                 command.Parameters.AddWithValue("@maxPrice", TAZ.maxPrice);
                 command.Parameters.AddWithValue("@GB", TAZ.GB);
@@ -101,12 +137,12 @@ namespace zerocode
                 }
                     
 
-            }
+            //}
 
-            catch
-            {
-                MessageBox.Show("Неверный ввод данных");
-            }
+            //catch
+            //{
+            //    MessageBox.Show("Неверный ввод данных");
+            //}
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
