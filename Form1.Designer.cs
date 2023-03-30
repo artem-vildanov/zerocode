@@ -64,8 +64,6 @@
             this.button_fwd = new System.Windows.Forms.Button();
             this.label_privod = new System.Windows.Forms.Label();
             this.panel_obyom = new System.Windows.Forms.Panel();
-            this.textBox_obyom_switch = new System.Windows.Forms.TextBox();
-            this.trackBar_obyom_switch = new System.Windows.Forms.TrackBar();
             this.label_ob = new System.Windows.Forms.Label();
             this.panel_kuzov = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
@@ -93,13 +91,17 @@
             this.panel_startpage = new System.Windows.Forms.Panel();
             this.button_begin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.menu_panel.SuspendLayout();
             this.panel_price.SuspendLayout();
             this.panel_kpp.SuspendLayout();
             this.panel_rul.SuspendLayout();
             this.panel_privod.SuspendLayout();
             this.panel_obyom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar_obyom_switch)).BeginInit();
             this.panel_kuzov.SuspendLayout();
             this.panel_engine.SuspendLayout();
             this.panel_output_res.SuspendLayout();
@@ -475,35 +477,22 @@
             // 
             // panel_obyom
             // 
-            this.panel_obyom.Controls.Add(this.textBox_obyom_switch);
-            this.panel_obyom.Controls.Add(this.trackBar_obyom_switch);
+            this.panel_obyom.Controls.Add(this.label22);
+            this.panel_obyom.Controls.Add(this.textBox2);
+            this.panel_obyom.Controls.Add(this.textBox1);
+            this.panel_obyom.Controls.Add(this.label21);
+            this.panel_obyom.Controls.Add(this.label20);
             this.panel_obyom.Controls.Add(this.label_ob);
             this.panel_obyom.Location = new System.Drawing.Point(186, -30);
             this.panel_obyom.Name = "panel_obyom";
             this.panel_obyom.Size = new System.Drawing.Size(743, 524);
             this.panel_obyom.TabIndex = 5;
             // 
-            // textBox_obyom_switch
-            // 
-            this.textBox_obyom_switch.Location = new System.Drawing.Point(314, 239);
-            this.textBox_obyom_switch.Name = "textBox_obyom_switch";
-            this.textBox_obyom_switch.Size = new System.Drawing.Size(100, 20);
-            this.textBox_obyom_switch.TabIndex = 3;
-            // 
-            // trackBar_obyom_switch
-            // 
-            this.trackBar_obyom_switch.Location = new System.Drawing.Point(195, 195);
-            this.trackBar_obyom_switch.Maximum = 100;
-            this.trackBar_obyom_switch.Name = "trackBar_obyom_switch";
-            this.trackBar_obyom_switch.Size = new System.Drawing.Size(328, 50);
-            this.trackBar_obyom_switch.TabIndex = 2;
-            this.trackBar_obyom_switch.Scroll += new System.EventHandler(this.trackBar_obyom_switch_Scroll);
-            // 
             // label_ob
             // 
             this.label_ob.AutoSize = true;
             this.label_ob.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_ob.Location = new System.Drawing.Point(80, 84);
+            this.label_ob.Location = new System.Drawing.Point(83, 167);
             this.label_ob.Name = "label_ob";
             this.label_ob.Size = new System.Drawing.Size(557, 29);
             this.label_ob.TabIndex = 1;
@@ -796,6 +785,53 @@
     "\r\n";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(126, 248);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(188, 22);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Минимальный объем";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(392, 248);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(196, 22);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "Максимальный объем";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(162, 288);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(113, 20);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(426, 285);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(113, 20);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label22.Location = new System.Drawing.Point(164, 346);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(364, 36);
+            this.label22.TabIndex = 6;
+            this.label22.Text = "Мощные двигатели обладают большим объемом, \r\nно потребляют огромное количество то" +
+    "плива";
+            // 
             // car_choose
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -827,7 +863,6 @@
             this.panel_privod.PerformLayout();
             this.panel_obyom.ResumeLayout(false);
             this.panel_obyom.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar_obyom_switch)).EndInit();
             this.panel_kuzov.ResumeLayout(false);
             this.panel_kuzov.PerformLayout();
             this.panel_engine.ResumeLayout(false);
@@ -870,9 +905,7 @@
         private System.Windows.Forms.Button button_fwd;
         private System.Windows.Forms.Label label_privod;
         private System.Windows.Forms.Panel panel_obyom;
-        private System.Windows.Forms.TrackBar trackBar_obyom_switch;
         private System.Windows.Forms.Label label_ob;
-        private System.Windows.Forms.TextBox textBox_obyom_switch;
         private System.Windows.Forms.Panel panel_kuzov;
         private System.Windows.Forms.RadioButton radioButton_kuzov_pickup;
         private System.Windows.Forms.RadioButton radioButton_kuziv_hetchback;
@@ -907,6 +940,11 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label22;
     }
 }
 

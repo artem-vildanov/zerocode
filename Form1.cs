@@ -236,17 +236,6 @@ namespace zerocode
             panel_output_res.Visible = false;
         }
 
-        private void trackBar_obyom_switch_Scroll(object sender, EventArgs e)
-        {
-            textBox_obyom_switch.Text = Convert.ToString(Convert.ToDouble(trackBar_obyom_switch.Value) / 10);
-            TAZ.obyem = Convert.ToDouble(trackBar_obyom_switch.Value) / 10;
-        }
-
-        private void textBox_obyom_switch_TextChanged(object sender, EventArgs e)
-        {
-            //trackBar_obyom_switch.Value = Convert.ToInt32(Convert.ToDouble(textBox_obyom_switch.Text)*10);
-        }
-
         //private void radioButton_kuzov_sedan_CheckedChanged(object sender, EventArgs e)
         //{
 
@@ -323,6 +312,16 @@ namespace zerocode
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)//минимальный объем
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)//маскимальный объем
         {
 
         }
