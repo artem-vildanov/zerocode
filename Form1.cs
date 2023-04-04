@@ -22,7 +22,8 @@ namespace zerocode
             public string GB; //korobka
             public string rul; // left right
             public string privod;
-            public double obyem;
+            public double minObyem;
+            public double maxObyem;
             public string body;
             public string fuel;
 
@@ -47,7 +48,8 @@ namespace zerocode
             TAZ.GB = string.Empty;
             TAZ.rul = string.Empty;
             TAZ.privod = string.Empty;
-            TAZ.obyem = -1;
+            TAZ.minObyem = 0.0;
+            TAZ.maxObyem = 10.0;
             TAZ.body = string.Empty;
             TAZ.fuel = string.Empty;
 
@@ -85,7 +87,7 @@ namespace zerocode
                     "SELECT Mark, Model, Price " +
                     "FROM CAR " +
                     "WHERE " +
-                    "(Price BETWEEN @minPrice AND @maxPrice) ";
+                    "(Price BETWEEN @minPrice AND @maxPrice) AND (Obyem BETWEEN @minObyem AND @maxObyem) ";
                 //+
                 //"AND GB = @GB " + "AND Rul = @rul " + "AND Privod = @privod " + "AND Obyem = @obyem " +
                 //"AND Body_Type = @body " + "AND Fuel = @fuel";
@@ -102,8 +104,6 @@ namespace zerocode
                 if (!string.IsNullOrEmpty(TAZ.rul))
                     query += "AND Rul = @rul ";
                 
-                if (TAZ.obyem != -1)
-                    query += "AND Obyem = @obyem ";
 
                 if (!string.IsNullOrEmpty(TAZ.body))
                     query += "AND Body_Type = @body ";
@@ -117,12 +117,26 @@ namespace zerocode
                 
                 command.Parameters.AddWithValue("@minPrice", TAZ.minPrice);
                 command.Parameters.AddWithValue("@maxPrice", TAZ.maxPrice);
-                command.Parameters.AddWithValue("@GB", TAZ.GB);
-                command.Parameters.AddWithValue("@rul", TAZ.rul);
-                command.Parameters.AddWithValue("@privod", TAZ.privod);
-                command.Parameters.AddWithValue("@obyem", TAZ.obyem);
-                command.Parameters.AddWithValue("@body", TAZ.body);
-                command.Parameters.AddWithValue("@fuel", TAZ.fuel);
+
+                command.Parameters.AddWithValue("@maxObyem", TAZ.maxObyem);
+                command.Parameters.AddWithValue("@minObyem", TAZ.minObyem);
+
+                if (!string.IsNullOrEmpty(TAZ.GB))
+                    command.Parameters.AddWithValue("@GB", TAZ.GB);
+
+                if (!string.IsNullOrEmpty(TAZ.rul))
+                    command.Parameters.AddWithValue("@rul", TAZ.rul);
+
+                if (!string.IsNullOrEmpty(TAZ.privod))
+                    command.Parameters.AddWithValue("@privod", TAZ.privod);
+
+                
+                
+                if (!string.IsNullOrEmpty(TAZ.body))
+                    command.Parameters.AddWithValue("@body", TAZ.body);
+
+                if (!string.IsNullOrEmpty(TAZ.fuel))
+                    command.Parameters.AddWithValue("@fuel", TAZ.fuel);
 
                 // получаем объект OleDbDataReader для чтения табличного результата запроса SELECT
                 OleDbDataReader reader = command.ExecuteReader();
@@ -135,7 +149,7 @@ namespace zerocode
                     
                     richTextBox1.Text += reader[0] + " " + reader[1] + "\t\t\t" + reader[2] + " руб.\n";
                 }
-                    
+
 
             //}
 
@@ -143,13 +157,14 @@ namespace zerocode
             //{
             //    MessageBox.Show("Неверный ввод данных");
             //}
-        }
+}
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             // заркываем соединение с БД
             myConnection.Close();
         }
+
 
         private void price_but_Click(object sender, EventArgs e)
         {
@@ -176,6 +191,7 @@ namespace zerocode
             panel_output_res.Visible = false;
         }
 
+
         private void rul_but_Click(object sender, EventArgs e)
         {
             panel_price.Visible = false;
@@ -187,6 +203,7 @@ namespace zerocode
             panel_engine.Visible = false;
             panel_output_res.Visible = false;
         }
+
 
         private void privod_but_Click(object sender, EventArgs e)
         {
@@ -200,6 +217,7 @@ namespace zerocode
             panel_output_res.Visible = false;
         }
 
+
         private void obyom_but_Click(object sender, EventArgs e)
         {
             panel_price.Visible = false;
@@ -211,6 +229,7 @@ namespace zerocode
             panel_engine.Visible = false;
             panel_output_res.Visible = false;
         }
+
 
         private void kuzov_but_Click(object sender, EventArgs e)
         {
@@ -224,6 +243,7 @@ namespace zerocode
             panel_output_res.Visible = false;
         }
 
+
         private void engine_but_Click(object sender, EventArgs e)
         {
             panel_price.Visible = false;
@@ -236,25 +256,6 @@ namespace zerocode
             panel_output_res.Visible = false;
         }
 
-        //private void radioButton_kuzov_sedan_CheckedChanged(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void radioButton_kuziv_hetchback_CheckedChanged(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void radioButton_kuzov_pickup_CheckedChanged(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void radioButton_kuzov_minivan_CheckedChanged(object sender, EventArgs e)
-        //{
-
-        //}
 
         private void button_engine_electro_Click(object sender, EventArgs e)
         {
@@ -285,7 +286,6 @@ namespace zerocode
         {
             TAZ.GB = "Автомат";
         }
-
         private void button_fwd_Click(object sender, EventArgs e)
         {
             TAZ.privod = "FWD";
@@ -311,19 +311,41 @@ namespace zerocode
             TAZ.rul = "Правый";
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
 
+        private void textBox2_TextChanged(object sender, EventArgs e)//max объем
+        {
+            TAZ.minObyem = double.Parse(textBox2.Text);
+
+            if (textBox2.Text == "")
+                TAZ.minObyem = 0.0;
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)//минимальный объем
+        private void textBox1_TextChanged(object sender, EventArgs e)//min объем
         {
 
-        }
+            TAZ.maxObyem = double.Parse(textBox1.Text);
+            //int temp = Convert.ToInt32(textBox1.Text);
+            //try
+            //{
+                
+            //}
+                
+            //catch
+            //{
+            //    try
+            //    {
+            //        if (textBox2.Text == "")
+            //            TAZ.maxObyem = double.MaxValue;
+            //    }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)//маскимальный объем
-        {
-
+            //    catch
+            //    {
+            //        MessageBox.Show("Неверный ввод данных (ПИШИ ЧЕРЕЗ ЗАПЯТУЮ ПИДОР)");
+            //    }
+                
+           // }
+            
+            
         }
     }
 }
