@@ -27,9 +27,6 @@ namespace zerocode
             public double maxObyem;
             public string body;
             public string fuel;
-
-            //public bool isAnyInput;
-
         }
 
         car TAZ;
@@ -148,17 +145,9 @@ namespace zerocode
                     query += "AND Body_Type = @body ";
 
                 if (!string.IsNullOrEmpty(TAZ.fuel))
-                    query += "AND Fuel = @fuel ";
-
-
-                // OleDbCommand czxc = new OleDbCommand()
-               
+                    query += "AND Fuel = @fuel ";               
             }
 
-
-            //+
-            //"AND GB = @GB " + "AND Rul = @rul " + "AND Privod = @privod " + "AND Obyem = @obyem " +
-            //"AND Body_Type = @body " + "AND Fuel = @fuel";
 
             OleDbCommand command = new OleDbCommand(query, myConnection);
 
@@ -193,12 +182,7 @@ namespace zerocode
 
 
 
-
-
             // выполняем запрос и выводим результат в textBox1
-
-            
-
 
             //reader[0] - Марка
             //reader[1] - Модель
@@ -216,16 +200,12 @@ namespace zerocode
                 while (reader.Read())
                 {
                     
-                    richTextBox1.Text += reader[0] + " " + reader[1] + "\n" + reader[3] + " л (" + reader[4] + " л.с.), " + reader[5] + ", " + reader[6] + ", " + reader[7] + ", " + reader[8] + ", " + reader[9] + ", " + reader[2] + " руб.\n\n";
+                    richTextBox1.Text += reader[0] + " " + reader[1] + "\n" 
+                    + reader[3] + " л (" + reader[4] + " л.с.), " 
+                    + reader[5] + ", " + reader[6] + ", " + reader[7] + ", " + reader[8] + ", " + reader[9] + ", " + reader[2] + " руб.\n\n";
                 }
 
 
-            //}
-
-            //catch
-            //{
-            //    MessageBox.Show("Неверный ввод данных");
-            //}
 }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -381,38 +361,6 @@ namespace zerocode
         }
 
 
-        private void textBox2_TextChanged(object sender, EventArgs e)//max объем
-        {
-            
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)//min объем
-        {
-
-            
-            //int temp = Convert.ToInt32(textBox1.Text);
-            //try
-            //{
-                
-            //}
-                
-            //catch
-            //{
-            //    try
-            //    {
-            //        if (textBox2.Text == "")
-            //            TAZ.maxObyem = double.MaxValue;
-            //    }
-
-            //    catch
-            //    {
-            //        MessageBox.Show("Неверный ввод данных (ПИШИ ЧЕРЕЗ ЗАПЯТУЮ ПИДОР)");
-            //    }
-                
-           // }
-            
-            
-        }
 
         private void price_confirm_Click(object sender, EventArgs e)
         {
