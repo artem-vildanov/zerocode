@@ -80,9 +80,6 @@ namespace zerocode
                 if (radioButton_kuzov_pickup.Checked) TAZ.body = "Пикап";
                 if (radioButton_kuzov_sedan.Checked) TAZ.body = "Седан";
 
-
-
-
                 string query =
                     "SELECT Mark, Model, Price " +
                     "FROM CAR " +
@@ -104,7 +101,6 @@ namespace zerocode
                 if (!string.IsNullOrEmpty(TAZ.rul))
                     query += "AND Rul = @rul ";
                 
-
                 if (!string.IsNullOrEmpty(TAZ.body))
                     query += "AND Body_Type = @body ";
 
@@ -128,9 +124,7 @@ namespace zerocode
                     command.Parameters.AddWithValue("@rul", TAZ.rul);
 
                 if (!string.IsNullOrEmpty(TAZ.privod))
-                    command.Parameters.AddWithValue("@privod", TAZ.privod);
-
-                
+                    command.Parameters.AddWithValue("@privod", TAZ.privod);  
                 
                 if (!string.IsNullOrEmpty(TAZ.body))
                     command.Parameters.AddWithValue("@body", TAZ.body);
@@ -346,6 +340,16 @@ namespace zerocode
            // }
             
             
+        }
+
+        private void price_confirm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void obyom_confirm_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
