@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,6 +27,8 @@ namespace zerocode
             public double maxObyem;
             public string body;
             public string fuel;
+
+            //public bool isAnyInput;
 
         }
 
@@ -52,7 +55,10 @@ namespace zerocode
             TAZ.maxObyem = 10.0;
             TAZ.body = string.Empty;
             TAZ.fuel = string.Empty;
+            TAZ.minPrice = 0;
+            TAZ.maxPrice = Int32.MaxValue;
 
+            //TAZ.isAnyInput = false;
         }
 
         private void output_res_but_Click(object sender, EventArgs e)
@@ -67,27 +73,64 @@ namespace zerocode
             panel_output_res.Visible = true;
 
 
+            if (radioButton_kuziv_hetchback.Checked) TAZ.body = "Хэтчбек";
+            if (radioButton_kuzov_jeep.Checked) TAZ.body = "Джип";
+            if (radioButton_kuzov_minivan.Checked) TAZ.body = "Минивэн";
+            if (radioButton_kuzov_pickup.Checked) TAZ.body = "Пикап";
+            if (radioButton_kuzov_sedan.Checked) TAZ.body = "Седан";
 
 
-            //try
-            //{
-                TAZ.minPrice = Convert.ToInt32(min_text_box.Text);
-                TAZ.maxPrice = Convert.ToInt32(max_text_box.Text);
+            // Формирование выбора пользователя
+            string UserChoice = "";
 
-                if (radioButton_kuziv_hetchback.Checked) TAZ.body = "Хэтчбек";
-                if (radioButton_kuzov_jeep.Checked) TAZ.body = "Джип";
-                if (radioButton_kuzov_minivan.Checked) TAZ.body = "Минивэн";
-                if (radioButton_kuzov_pickup.Checked) TAZ.body = "Пикап";
-                if (radioButton_kuzov_sedan.Checked) TAZ.body = "Седан";
 
-                string query =
-                    "SELECT Mark, Model, Price " +
-                    "FROM CAR " +
-                    "WHERE " +
-                    "(Price BETWEEN @minPrice AND @maxPrice) AND (Obyem BETWEEN @minObyem AND @maxObyem) ";
-                //+
-                //"AND GB = @GB " + "AND Rul = @rul " + "AND Privod = @privod " + "AND Obyem = @obyem " +
-                //"AND Body_Type = @body " + "AND Fuel = @fuel";
+            if (TAZ.minPrice != 0 && TAZ.maxPrice != Int32.MaxValue)
+                UserChoice += Convert.ToString(TAZ.minPrice) + " - " + Convert.ToString(TAZ.maxPrice) + " руб. , ";
+
+            if (TAZ.minObyem != 0.0 && TAZ.maxObyem != 10.0)
+                UserChoice += Convert.ToString(TAZ.minObyem) + " - " + Convert.ToString(TAZ.maxObyem) + " л , ";
+
+            if (!string.IsNullOrEmpty(TAZ.fuel))
+                UserChoice += TAZ.fuel + ", ";
+
+            if (!string.IsNullOrEmpty(TAZ.GB))
+                UserChoice += TAZ.GB + ", ";
+
+            if (!string.IsNullOrEmpty(TAZ.privod))
+                UserChoice += TAZ.privod + ", ";
+
+            if (!string.IsNullOrEmpty(TAZ.rul))
+                UserChoice += TAZ.rul + ", ";
+
+            if (!string.IsNullOrEmpty(TAZ.body))
+                UserChoice += TAZ.body + ", ";
+
+
+
+            if (UserChoice == "")
+                UserChoice = "ЭКСПЕРТНЫЙ ПОДБОР";
+
+            bool isExpert;
+            string query;
+            if(UserChoice == "ЭКСПЕРТНЫЙ ПОДБОР")
+            {
+                isExpert = true;
+                query =
+                "SELECT Mark, Model, Price, Obyem, HP, Fuel, GB, Privod, Rul, Body_Type " +
+                "FROM CAR " +
+                "WHERE " +
+                "(Obyem BETWEEN 1.4 AND 1.6) AND Rul = 'Левый' AND GB = 'Автомат' AND Fuel = 'Бензин' AND Body_Type = 'Седан' AND Privod = 'RWD'";
+            }
+
+            else
+            {
+                isExpert = false;
+                query =
+                "SELECT Mark, Model, Price, Obyem, HP, Fuel, GB, Privod, Rul, Body_Type " +
+                "FROM CAR " +
+                "WHERE " +
+                "(Price BETWEEN @minPrice AND @maxPrice) AND (Obyem BETWEEN @minObyem AND @maxObyem) ";
+
 
                 if (!string.IsNullOrEmpty(TAZ.GB))
                     query += "AND GB = @GB ";
@@ -100,7 +143,7 @@ namespace zerocode
 
                 if (!string.IsNullOrEmpty(TAZ.rul))
                     query += "AND Rul = @rul ";
-                
+
                 if (!string.IsNullOrEmpty(TAZ.body))
                     query += "AND Body_Type = @body ";
 
@@ -108,9 +151,21 @@ namespace zerocode
                     query += "AND Fuel = @fuel ";
 
 
-               // OleDbCommand czxc = new OleDbCommand()
-                OleDbCommand command = new OleDbCommand(query, myConnection);
+                // OleDbCommand czxc = new OleDbCommand()
+               
+            }
+
+
+            //+
+            //"AND GB = @GB " + "AND Rul = @rul " + "AND Privod = @privod " + "AND Obyem = @obyem " +
+            //"AND Body_Type = @body " + "AND Fuel = @fuel";
+
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+
+            if (!isExpert)
+            {
                 
+
                 command.Parameters.AddWithValue("@minPrice", TAZ.minPrice);
                 command.Parameters.AddWithValue("@maxPrice", TAZ.maxPrice);
 
@@ -124,24 +179,44 @@ namespace zerocode
                     command.Parameters.AddWithValue("@rul", TAZ.rul);
 
                 if (!string.IsNullOrEmpty(TAZ.privod))
-                    command.Parameters.AddWithValue("@privod", TAZ.privod);  
-                
+                    command.Parameters.AddWithValue("@privod", TAZ.privod);
+
                 if (!string.IsNullOrEmpty(TAZ.body))
                     command.Parameters.AddWithValue("@body", TAZ.body);
 
                 if (!string.IsNullOrEmpty(TAZ.fuel))
                     command.Parameters.AddWithValue("@fuel", TAZ.fuel);
+            }
 
-                // получаем объект OleDbDataReader для чтения табличного результата запроса SELECT
-                OleDbDataReader reader = command.ExecuteReader();
+            // получаем объект OleDbDataReader для чтения табличного результата запроса SELECT
+            OleDbDataReader reader = command.ExecuteReader();
 
-                // выполняем запрос и выводим результат в textBox1
-                richTextBox1.Text = "";
-                richTextBox1.Text += "МАРКА МОДЕЛЬ\tЦЕНА\n";
+
+
+
+
+            // выполняем запрос и выводим результат в textBox1
+
+            
+
+
+            //reader[0] - Марка
+            //reader[1] - Модель
+            //reader[2] - Цена
+            //reader[3] - Объем
+            //reader[4] - Л.С.
+            //reader[5] - Топливо
+            //reader[6] - КПП
+            //reader[7] - Привод
+            //reader[8] - Руль
+            //reader[9] - Кузов
+
+            richTextBox1.Text = "ВАШ ВЫБОР:\n" + UserChoice + "\n\n";
+                //richTextBox1.Text += "МАРКА МОДЕЛЬ\tЦЕНА\n";
                 while (reader.Read())
                 {
                     
-                    richTextBox1.Text += reader[0] + " " + reader[1] + "\t\t\t" + reader[2] + " руб.\n";
+                    richTextBox1.Text += reader[0] + " " + reader[1] + "\n" + reader[3] + " л (" + reader[4] + " л.с.), " + reader[5] + ", " + reader[6] + ", " + reader[7] + ", " + reader[8] + ", " + reader[9] + ", " + reader[2] + " руб.\n\n";
                 }
 
 
@@ -308,16 +383,13 @@ namespace zerocode
 
         private void textBox2_TextChanged(object sender, EventArgs e)//max объем
         {
-            TAZ.minObyem = double.Parse(textBox2.Text);
-
-            if (textBox2.Text == "")
-                TAZ.minObyem = 0.0;
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)//min объем
         {
 
-            TAZ.maxObyem = double.Parse(textBox1.Text);
+            
             //int temp = Convert.ToInt32(textBox1.Text);
             //try
             //{
@@ -344,12 +416,36 @@ namespace zerocode
 
         private void price_confirm_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                TAZ.minPrice = Convert.ToInt32(min_text_box.Text);
+                TAZ.maxPrice = Convert.ToInt32(max_text_box.Text);
+            }
+            
+            catch 
+            {
+                MessageBox.Show("Неверный ввод диапазона");
+            }
         }
 
         private void obyom_confirm_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //if (textBox2.Text == "") //не робит
+                //    TAZ.maxObyem = 10.0;
 
+                //if (textBox1.Text == "")
+                //    TAZ.minObyem = 0.0;
+
+                TAZ.maxObyem = double.Parse(textBox2.Text);
+                TAZ.minObyem = double.Parse(textBox1.Text);
+            }
+
+            catch
+            {
+                MessageBox.Show("Неверный ввод диапазона \n(Вводите дробные числа через запятую)");
+            }
         }
     }
 }
