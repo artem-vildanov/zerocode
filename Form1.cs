@@ -16,7 +16,7 @@ namespace zerocode
 {
     public partial class car_choose : Form
     {
-        struct car
+        struct car //структура для запроса
         {
             public int minPrice;
             public int maxPrice;
@@ -27,6 +27,31 @@ namespace zerocode
             public double maxObyem;
             public string body;
             public string fuel;
+        }
+
+        struct reader_TAZ // структура для reader 
+        {
+            public string mark;
+            public string model;
+            public int price;
+            public double obyem;
+            public int HP;
+            public string fuel;
+            public string GB;
+            public string privod;
+            public string rul;
+            public string body;
+
+            //reader[0] - Марка
+            //reader[1] - Модель
+            //reader[2] - Цена
+            //reader[3] - Объем
+            //reader[4] - Л.С.
+            //reader[5] - Топливо
+            //reader[6] - КПП
+            //reader[7] - Привод
+            //reader[8] - Руль
+            //reader[9] - Кузов
         }
 
         car TAZ;
@@ -55,7 +80,7 @@ namespace zerocode
             TAZ.minPrice = 0;
             TAZ.maxPrice = Int32.MaxValue;
 
-            //TAZ.isAnyInput = false;
+
         }
 
         private void output_res_but_Click(object sender, EventArgs e)
@@ -116,7 +141,8 @@ namespace zerocode
                 "SELECT Mark, Model, Price, Obyem, HP, Fuel, GB, Privod, Rul, Body_Type " +
                 "FROM CAR " +
                 "WHERE " +
-                "(Obyem BETWEEN 1.4 AND 1.6) AND Rul = 'Левый' AND GB = 'Автомат' AND Fuel = 'Бензин' AND Body_Type = 'Седан' AND Privod = 'RWD'";
+                "(Obyem BETWEEN 1.4 AND 1.6) AND Rul = 'Левый' AND GB = 'Автомат' AND Fuel = 'Бензин' AND Body_Type = 'Седан' AND Privod = 'FWD' " +
+                "ORDER BY Rec DESC ";
             }
 
             else
@@ -145,7 +171,9 @@ namespace zerocode
                     query += "AND Body_Type = @body ";
 
                 if (!string.IsNullOrEmpty(TAZ.fuel))
-                    query += "AND Fuel = @fuel ";               
+                    query += "AND Fuel = @fuel ";
+
+                query += "ORDER BY Rec DESC ";
             }
 
 
@@ -195,15 +223,37 @@ namespace zerocode
             //reader[8] - Руль
             //reader[9] - Кузов
 
-            richTextBox1.Text = "ВАШ ВЫБОР:\n" + UserChoice + "\n\n";
-                //richTextBox1.Text += "МАРКА МОДЕЛЬ\tЦЕНА\n";
-                while (reader.Read())
+            if (UserChoice == "ЭКСПЕРТНЫЙ ПОДБОР")
+                richTextBox1.Text = "ВАШ ВЫБОР:\n" + UserChoice + "\n(Малолитражные седаны на автомате на все случаи жизни)\n\n";
+
+            else
+                richTextBox1.Text = "ВАШ ВЫБОР:\n" + UserChoice + "\n\n";
+            //richTextBox1.Text += "МАРКА МОДЕЛЬ\tЦЕНА\n";
+
+            bool flag = true;
+
+            while (reader.Read())
+            {
+                if(flag)
                 {
-                    
-                    richTextBox1.Text += reader[0] + " " + reader[1] + "\n" 
-                    + reader[3] + " л (" + reader[4] + " л.с.), " 
+                    richTextBox1.Text += "================МЫ РЕКОМЕНДУЕМ================\n";
+                    richTextBox1.Text += reader[0] + " " + reader[1] + "\n"
+                    + reader[3] + " л (" + reader[4] + " л.с.), "
+                    + reader[5] + ", " + reader[6] + ", " + reader[7] + ", " + reader[8] + ", " + reader[9] + ", " + reader[2] + " руб.\n";
+                    richTextBox1.Text += "=============================================\n\n\n";
+
+                    richTextBox1.Text += "================ДРУГИЕ ВАРИАНТЫ================\n";
+                    flag = false;
+                }
+
+                else
+                {
+                    richTextBox1.Text += reader[0] + " " + reader[1] + "\n"
+                    + reader[3] + " л (" + reader[4] + " л.с.), "
                     + reader[5] + ", " + reader[6] + ", " + reader[7] + ", " + reader[8] + ", " + reader[9] + ", " + reader[2] + " руб.\n\n";
                 }
+                
+            }
 
 
 }
@@ -264,6 +314,9 @@ namespace zerocode
             panel_kuzov.Visible = false;
             panel_engine.Visible = false;
             panel_output_res.Visible = false;
+
+
+            
         }
 
 
@@ -303,6 +356,9 @@ namespace zerocode
             panel_kuzov.Visible = false;
             panel_engine.Visible = true;
             panel_output_res.Visible = false;
+
+
+
         }
 
 
