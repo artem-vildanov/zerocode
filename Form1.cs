@@ -29,30 +29,30 @@ namespace zerocode
             public string fuel;
         }
 
-        struct reader_TAZ // структура для reader 
-        {
-            public string mark;
-            public string model;
-            public int price;
-            public double obyem;
-            public int HP;
-            public string fuel;
-            public string GB;
-            public string privod;
-            public string rul;
-            public string body;
+        //struct reader_TAZ // структура для reader 
+        //{
+        //    public string mark;
+        //    public string model;
+        //    public int price;
+        //    public double obyem;
+        //    public int HP;
+        //    public string fuel;
+        //    public string GB;
+        //    public string privod;
+        //    public string rul;
+        //    public string body;
 
-            //reader[0] - Марка
-            //reader[1] - Модель
-            //reader[2] - Цена
-            //reader[3] - Объем
-            //reader[4] - Л.С.
-            //reader[5] - Топливо
-            //reader[6] - КПП
-            //reader[7] - Привод
-            //reader[8] - Руль
-            //reader[9] - Кузов
-        }
+        //    //reader[0] - Марка
+        //    //reader[1] - Модель
+        //    //reader[2] - Цена
+        //    //reader[3] - Объем
+        //    //reader[4] - Л.С.
+        //    //reader[5] - Топливо
+        //    //reader[6] - КПП
+        //    //reader[7] - Привод
+        //    //reader[8] - Руль
+        //    //reader[9] - Кузов
+        //}
 
         car TAZ;
 
@@ -80,7 +80,7 @@ namespace zerocode
             TAZ.minPrice = 0;
             TAZ.maxPrice = Int32.MaxValue;
 
-
+            richTextBox1.Text = "Выберите интересующие вас критерии \n\nИли нажмите ВЫВЕСТИ РЕЗУЛЬТАТ \nдля полностью ЭКСПЕРТНОГО подбора";
         }
 
         private void output_res_but_Click(object sender, EventArgs e)
@@ -109,7 +109,7 @@ namespace zerocode
             if (TAZ.minPrice != 0 && TAZ.maxPrice != Int32.MaxValue)
                 UserChoice += Convert.ToString(TAZ.minPrice) + " - " + Convert.ToString(TAZ.maxPrice) + " руб. , ";
 
-            if (TAZ.minObyem != 0.0 && TAZ.maxObyem != 10.0)
+            if (TAZ.minObyem != 0.0 || TAZ.maxObyem != 10.0)
                 UserChoice += Convert.ToString(TAZ.minObyem) + " - " + Convert.ToString(TAZ.maxObyem) + " л , ";
 
             if (!string.IsNullOrEmpty(TAZ.fuel))
@@ -255,7 +255,8 @@ namespace zerocode
                 
             }
 
-
+            if (richTextBox1.Text == ("ВАШ ВЫБОР:\n" + UserChoice + "\n\n"))
+                richTextBox1.Text += "ПО ЗАДАННЫМ КРИТЕРИЯМ НИЧЕГО НЕ НАЙДЕНО!";
 }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -365,6 +366,7 @@ namespace zerocode
         private void button_engine_electro_Click(object sender, EventArgs e)
         {
             TAZ.fuel = "Электро";
+
         }
 
         private void button_engine_petrol_Click(object sender, EventArgs e)
