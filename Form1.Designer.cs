@@ -98,9 +98,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_startpage = new System.Windows.Forms.Panel();
+            this.button_begin = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
@@ -110,9 +112,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.panel_startpage = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button_begin = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menu_panel.SuspendLayout();
             this.panel_price.SuspendLayout();
             this.panel_kpp.SuspendLayout();
@@ -124,6 +124,7 @@
             this.panel_output_res.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_startpage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menu_panel
@@ -862,7 +863,6 @@
             this.panel1.Controls.Add(this.panel_startpage);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.webBrowser1);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.listBox3);
             this.panel1.Controls.Add(this.listBox2);
@@ -872,10 +872,42 @@
             this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-5, -30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(933, 524);
             this.panel1.TabIndex = 9;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel_startpage
+            // 
+            this.panel_startpage.Controls.Add(this.button_begin);
+            this.panel_startpage.Controls.Add(this.label4);
+            this.panel_startpage.Location = new System.Drawing.Point(0, 0);
+            this.panel_startpage.Name = "panel_startpage";
+            this.panel_startpage.Size = new System.Drawing.Size(935, 524);
+            this.panel_startpage.TabIndex = 15;
+            // 
+            // button_begin
+            // 
+            this.button_begin.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_begin.Location = new System.Drawing.Point(330, 271);
+            this.button_begin.Name = "button_begin";
+            this.button_begin.Size = new System.Drawing.Size(281, 114);
+            this.button_begin.TabIndex = 1;
+            this.button_begin.Text = "привет";
+            this.button_begin.UseVisualStyleBackColor = true;
+            this.button_begin.Click += new System.EventHandler(this.button_begin_Click_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(414, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 29);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Привет";
             // 
             // button4
             // 
@@ -896,14 +928,6 @@
             this.button2.Text = "применить изменения";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(649, 144);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(250, 250);
-            this.webBrowser1.TabIndex = 11;
             // 
             // textBox3
             // 
@@ -1001,35 +1025,15 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "где вы будете кататься";
             // 
-            // panel_startpage
+            // pictureBox1
             // 
-            this.panel_startpage.Controls.Add(this.button_begin);
-            this.panel_startpage.Controls.Add(this.label4);
-            this.panel_startpage.Location = new System.Drawing.Point(0, 0);
-            this.panel_startpage.Name = "panel_startpage";
-            this.panel_startpage.Size = new System.Drawing.Size(935, 524);
-            this.panel_startpage.TabIndex = 15;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(414, 175);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 29);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Привет";
-            // 
-            // button_begin
-            // 
-            this.button_begin.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_begin.Location = new System.Drawing.Point(330, 271);
-            this.button_begin.Name = "button_begin";
-            this.button_begin.Size = new System.Drawing.Size(281, 114);
-            this.button_begin.TabIndex = 1;
-            this.button_begin.Text = "привет";
-            this.button_begin.UseVisualStyleBackColor = true;
-            this.button_begin.Click += new System.EventHandler(this.button_begin_Click_1);
+            this.pictureBox1.Image = global::zerocode.Properties.Resources.ncSBhQQsLLQ;
+            this.pictureBox1.Location = new System.Drawing.Point(567, 140);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(294, 258);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // car_choose
             // 
@@ -1072,6 +1076,7 @@
             this.panel1.PerformLayout();
             this.panel_startpage.ResumeLayout(false);
             this.panel_startpage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1149,7 +1154,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.ListBox listBox2;
@@ -1162,6 +1166,7 @@
         private System.Windows.Forms.Panel panel_startpage;
         private System.Windows.Forms.Button button_begin;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
