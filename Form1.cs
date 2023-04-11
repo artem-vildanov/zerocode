@@ -106,7 +106,7 @@ namespace zerocode
             string UserChoice = "";
 
 
-            if (TAZ.minPrice != 0 || TAZ.maxPrice != Int32.MaxValue)
+            if (TAZ.minPrice != 0 && TAZ.maxPrice != Int32.MaxValue)
                 UserChoice += Convert.ToString(TAZ.minPrice) + " - " + Convert.ToString(TAZ.maxPrice) + " руб. , ";
 
             if (TAZ.minObyem != 0.0 || TAZ.maxObyem != 10.0)
