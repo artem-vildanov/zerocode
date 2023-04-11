@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(car_choose));
             this.menu_panel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.engine_but = new System.Windows.Forms.Button();
             this.output_res_but = new System.Windows.Forms.Button();
             this.kuzov_but = new System.Windows.Forms.Button();
@@ -97,8 +98,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel_startpage = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.button_begin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.menu_panel.SuspendLayout();
             this.panel_price.SuspendLayout();
             this.panel_kpp.SuspendLayout();
@@ -109,10 +120,12 @@
             this.panel_engine.SuspendLayout();
             this.panel_output_res.SuspendLayout();
             this.panel_startpage.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu_panel
             // 
+            this.menu_panel.Controls.Add(this.button1);
             this.menu_panel.Controls.Add(this.engine_but);
             this.menu_panel.Controls.Add(this.output_res_but);
             this.menu_panel.Controls.Add(this.kuzov_but);
@@ -126,11 +139,21 @@
             this.menu_panel.Size = new System.Drawing.Size(192, 524);
             this.menu_panel.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(42, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 92);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "батон\r\n один нажми\r\n меня";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // engine_but
             // 
-            this.engine_but.Location = new System.Drawing.Point(17, 360);
+            this.engine_but.Location = new System.Drawing.Point(17, 433);
             this.engine_but.Name = "engine_but";
-            this.engine_but.Size = new System.Drawing.Size(156, 47);
+            this.engine_but.Size = new System.Drawing.Size(168, 27);
             this.engine_but.TabIndex = 8;
             this.engine_but.Text = "Тип двигателя";
             this.engine_but.UseVisualStyleBackColor = true;
@@ -138,9 +161,9 @@
             // 
             // output_res_but
             // 
-            this.output_res_but.Location = new System.Drawing.Point(17, 413);
+            this.output_res_but.Location = new System.Drawing.Point(42, 466);
             this.output_res_but.Name = "output_res_but";
-            this.output_res_but.Size = new System.Drawing.Size(156, 94);
+            this.output_res_but.Size = new System.Drawing.Size(106, 40);
             this.output_res_but.TabIndex = 7;
             this.output_res_but.Text = "Вывести результаты";
             this.output_res_but.UseVisualStyleBackColor = true;
@@ -148,9 +171,9 @@
             // 
             // kuzov_but
             // 
-            this.kuzov_but.Location = new System.Drawing.Point(17, 307);
+            this.kuzov_but.Location = new System.Drawing.Point(17, 377);
             this.kuzov_but.Name = "kuzov_but";
-            this.kuzov_but.Size = new System.Drawing.Size(156, 47);
+            this.kuzov_but.Size = new System.Drawing.Size(156, 50);
             this.kuzov_but.TabIndex = 6;
             this.kuzov_but.Text = "Тип кузова";
             this.kuzov_but.UseVisualStyleBackColor = true;
@@ -158,9 +181,9 @@
             // 
             // obyom_but
             // 
-            this.obyom_but.Location = new System.Drawing.Point(17, 254);
+            this.obyom_but.Location = new System.Drawing.Point(36, 344);
             this.obyom_but.Name = "obyom_but";
-            this.obyom_but.Size = new System.Drawing.Size(156, 47);
+            this.obyom_but.Size = new System.Drawing.Size(137, 27);
             this.obyom_but.TabIndex = 5;
             this.obyom_but.Text = "Объем двигателя";
             this.obyom_but.UseVisualStyleBackColor = true;
@@ -168,9 +191,9 @@
             // 
             // privod_but
             // 
-            this.privod_but.Location = new System.Drawing.Point(17, 201);
+            this.privod_but.Location = new System.Drawing.Point(28, 267);
             this.privod_but.Name = "privod_but";
-            this.privod_but.Size = new System.Drawing.Size(156, 47);
+            this.privod_but.Size = new System.Drawing.Size(120, 67);
             this.privod_but.TabIndex = 4;
             this.privod_but.Text = "Привод";
             this.privod_but.UseVisualStyleBackColor = true;
@@ -178,9 +201,9 @@
             // 
             // rul_but
             // 
-            this.rul_but.Location = new System.Drawing.Point(17, 148);
+            this.rul_but.Location = new System.Drawing.Point(17, 228);
             this.rul_but.Name = "rul_but";
-            this.rul_but.Size = new System.Drawing.Size(156, 47);
+            this.rul_but.Size = new System.Drawing.Size(111, 32);
             this.rul_but.TabIndex = 3;
             this.rul_but.Text = "Левый/правый руль";
             this.rul_but.UseVisualStyleBackColor = true;
@@ -188,7 +211,7 @@
             // 
             // kpp_but
             // 
-            this.kpp_but.Location = new System.Drawing.Point(17, 95);
+            this.kpp_but.Location = new System.Drawing.Point(29, 175);
             this.kpp_but.Name = "kpp_but";
             this.kpp_but.Size = new System.Drawing.Size(156, 47);
             this.kpp_but.TabIndex = 2;
@@ -198,9 +221,9 @@
             // 
             // price_but
             // 
-            this.price_but.Location = new System.Drawing.Point(17, 42);
+            this.price_but.Location = new System.Drawing.Point(17, 140);
             this.price_but.Name = "price_but";
-            this.price_but.Size = new System.Drawing.Size(156, 47);
+            this.price_but.Size = new System.Drawing.Size(52, 29);
             this.price_but.TabIndex = 1;
             this.price_but.Text = "Цена";
             this.price_but.UseVisualStyleBackColor = true;
@@ -833,12 +856,89 @@
             // 
             // panel_startpage
             // 
+            this.panel_startpage.Controls.Add(this.panel1);
             this.panel_startpage.Controls.Add(this.button_begin);
             this.panel_startpage.Controls.Add(this.label4);
             this.panel_startpage.Location = new System.Drawing.Point(-5, -30);
             this.panel_startpage.Name = "panel_startpage";
             this.panel_startpage.Size = new System.Drawing.Size(931, 524);
             this.panel_startpage.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listBox3);
+            this.panel1.Controls.Add(this.listBox2);
+            this.panel1.Controls.Add(this.listBox1);
+            this.panel1.Controls.Add(this.label28);
+            this.panel1.Controls.Add(this.label27);
+            this.panel1.Controls.Add(this.label26);
+            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(934, 521);
+            this.panel1.TabIndex = 2;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Sitka Display", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label28.Location = new System.Drawing.Point(45, 73);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(795, 30);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "ОТветьте на вопросы пожалуйста если не хотите отвечать не отвечайте спасибо";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Location = new System.Drawing.Point(131, 322);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(140, 16);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "ваш знак задиака";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(131, 382);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(128, 16);
+            this.label26.TabIndex = 3;
+            this.label26.Text = "цвет ваших глаз";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label25.Location = new System.Drawing.Point(132, 207);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(221, 16);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "как часто вы будете кататся";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label24.Location = new System.Drawing.Point(132, 266);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(139, 16);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "сколько у вас лет";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.Location = new System.Drawing.Point(132, 154);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(182, 16);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "где вы будете кататься";
             // 
             // button_begin
             // 
@@ -862,6 +962,43 @@
             this.label4.Text = "Приветствуем вас в нашей системе по подбору авто!\r\nЧтобы начать, нажмите НАЧАТЬ\r\n" +
     "\r\n";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "негры",
+            "геи",
+            "карбюратор"});
+            this.listBox1.Location = new System.Drawing.Point(335, 144);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(150, 43);
+            this.listBox1.TabIndex = 7;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Items.AddRange(new object[] {
+            "негры",
+            "геи",
+            "карбюратор"});
+            this.listBox2.Location = new System.Drawing.Point(390, 193);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(150, 43);
+            this.listBox2.TabIndex = 8;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Items.AddRange(new object[] {
+            "негры",
+            "геи",
+            "карбюратор"});
+            this.listBox3.Location = new System.Drawing.Point(280, 255);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(150, 43);
+            this.listBox3.TabIndex = 9;
             // 
             // car_choose
             // 
@@ -902,6 +1039,8 @@
             this.panel_output_res.PerformLayout();
             this.panel_startpage.ResumeLayout(false);
             this.panel_startpage.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -978,6 +1117,17 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button price_confirm;
         private System.Windows.Forms.Button obyom_confirm;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
 
