@@ -114,8 +114,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\6fc750e38c21f9dc6a777c15cbf4be43.jpg" />
-    <None Include="Resources\pudge.jpg" />
+    <None Include="Resources\ncSBhQQsLLQ.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

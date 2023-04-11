@@ -488,5 +488,10 @@ namespace zerocode
             panel_output_res.Visible = false;
             panel1.Visible = false;
         }
+
+      private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }  
     }
 }

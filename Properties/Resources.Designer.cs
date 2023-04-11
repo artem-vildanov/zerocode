@@ -63,9 +63,9 @@ namespace zerocode.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pudge {
+        internal static System.Drawing.Bitmap ncSBhQQsLLQ {
             get {
-                object obj = ResourceManager.GetObject("pudge", resourceCulture);
+                object obj = ResourceManager.GetObject("ncSBhQQsLLQ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
