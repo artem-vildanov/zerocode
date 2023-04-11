@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(car_choose));
             this.menu_panel = new System.Windows.Forms.Panel();
             this.engine_but = new System.Windows.Forms.Button();
             this.output_res_but = new System.Windows.Forms.Button();
@@ -288,26 +289,28 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(396, 313);
+            this.label6.Location = new System.Drawing.Point(211, 360);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(278, 17);
+            this.label6.Size = new System.Drawing.Size(282, 51);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Автоматическое переключение передач";
+            this.label6.Text = "Автоматическое переключение передач\r\nПозволяет водителю не думать ни о чем,\r\nкром" +
+    "е дороги";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(72, 313);
+            this.label5.Location = new System.Drawing.Point(211, 245);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(217, 17);
+            this.label5.Size = new System.Drawing.Size(228, 51);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Ручное переключение передач";
+            this.label5.Text = "Ручное переключение передач\r\nПри правильном использовании\r\nгарантирует более плав" +
+    "ную езду";
             // 
             // button_kpp_a
             // 
             this.button_kpp_a.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_kpp_a.Location = new System.Drawing.Point(399, 236);
+            this.button_kpp_a.Location = new System.Drawing.Point(53, 360);
             this.button_kpp_a.Name = "button_kpp_a";
             this.button_kpp_a.Size = new System.Drawing.Size(129, 55);
             this.button_kpp_a.TabIndex = 2;
@@ -318,7 +321,7 @@
             // button_kpp_m
             // 
             this.button_kpp_m.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_kpp_m.Location = new System.Drawing.Point(166, 236);
+            this.button_kpp_m.Location = new System.Drawing.Point(53, 243);
             this.button_kpp_m.Name = "button_kpp_m";
             this.button_kpp_m.Size = new System.Drawing.Size(129, 55);
             this.button_kpp_m.TabIndex = 1;
@@ -353,7 +356,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(447, 321);
+            this.label8.Location = new System.Drawing.Point(141, 442);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(208, 17);
             this.label8.TabIndex = 4;
@@ -363,7 +366,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(127, 321);
+            this.label7.Location = new System.Drawing.Point(435, 262);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(170, 17);
             this.label7.TabIndex = 3;
@@ -372,7 +375,7 @@
             // button_right_rul
             // 
             this.button_right_rul.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_right_rul.Location = new System.Drawing.Point(420, 260);
+            this.button_right_rul.Location = new System.Drawing.Point(144, 373);
             this.button_right_rul.Name = "button_right_rul";
             this.button_right_rul.Size = new System.Drawing.Size(197, 52);
             this.button_right_rul.TabIndex = 2;
@@ -383,7 +386,7 @@
             // button_left_rul
             // 
             this.button_left_rul.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_left_rul.Location = new System.Drawing.Point(143, 260);
+            this.button_left_rul.Location = new System.Drawing.Point(432, 290);
             this.button_left_rul.Name = "button_left_rul";
             this.button_left_rul.Size = new System.Drawing.Size(197, 52);
             this.button_left_rul.TabIndex = 1;
@@ -419,36 +422,39 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(504, 318);
+            this.label11.Location = new System.Drawing.Point(352, 189);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(191, 17);
+            this.label11.Size = new System.Drawing.Size(265, 51);
             this.label11.TabIndex = 6;
-            this.label11.Text = "Для высокой проходимости";
+            this.label11.Text = "Комфортнее и удобнее для новичков.\r\nОн безопаснее и проще в управлении \r\nдаже без" +
+    " электронных помощников.\r\n";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(291, 310);
+            this.label10.Location = new System.Drawing.Point(352, 297);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(133, 34);
+            this.label10.Size = new System.Drawing.Size(305, 51);
             this.label10.TabIndex = 5;
-            this.label10.Text = "Используется \r\nна старых моделях";
+            this.label10.Text = "Подойдет тем, кто получает удовольствие \r\nот дрифта. Часто используется на\r\nбольш" +
+    "их, спортивных и дорогих автомобилях";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(33, 307);
+            this.label9.Location = new System.Drawing.Point(352, 408);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 34);
+            this.label9.Size = new System.Drawing.Size(265, 51);
             this.label9.TabIndex = 4;
-            this.label9.Text = "Для более \r\nбезопастного вождения";
+            this.label9.Text = "Комфортнее и удобнее для новичков.\r\nОн безопаснее и проще в управлении \r\nдаже без" +
+    " электронных помощников.";
             // 
             // button_rwd
             // 
             this.button_rwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_rwd.Location = new System.Drawing.Point(285, 233);
+            this.button_rwd.Location = new System.Drawing.Point(145, 290);
             this.button_rwd.Name = "button_rwd";
             this.button_rwd.Size = new System.Drawing.Size(154, 68);
             this.button_rwd.TabIndex = 3;
@@ -459,7 +465,7 @@
             // button_4wd
             // 
             this.button_4wd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_4wd.Location = new System.Drawing.Point(538, 233);
+            this.button_4wd.Location = new System.Drawing.Point(145, 178);
             this.button_4wd.Name = "button_4wd";
             this.button_4wd.Size = new System.Drawing.Size(154, 68);
             this.button_4wd.TabIndex = 2;
@@ -470,7 +476,7 @@
             // button_fwd
             // 
             this.button_fwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_fwd.Location = new System.Drawing.Point(36, 233);
+            this.button_fwd.Location = new System.Drawing.Point(145, 402);
             this.button_fwd.Name = "button_fwd";
             this.button_fwd.Size = new System.Drawing.Size(154, 68);
             this.button_fwd.TabIndex = 1;
@@ -482,7 +488,7 @@
             // 
             this.label_privod.AutoSize = true;
             this.label_privod.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_privod.Location = new System.Drawing.Point(61, 166);
+            this.label_privod.Location = new System.Drawing.Point(84, 115);
             this.label_privod.Name = "label_privod";
             this.label_privod.Size = new System.Drawing.Size(518, 26);
             this.label_privod.TabIndex = 0;
@@ -504,7 +510,7 @@
             // 
             // obyom_confirm
             // 
-            this.obyom_confirm.Location = new System.Drawing.Point(285, 336);
+            this.obyom_confirm.Location = new System.Drawing.Point(285, 413);
             this.obyom_confirm.Name = "obyom_confirm";
             this.obyom_confirm.Size = new System.Drawing.Size(136, 37);
             this.obyom_confirm.TabIndex = 7;
@@ -516,12 +522,14 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label22.Location = new System.Drawing.Point(164, 397);
+            this.label22.Location = new System.Drawing.Point(192, 322);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(338, 34);
+            this.label22.Size = new System.Drawing.Size(338, 68);
             this.label22.TabIndex = 6;
             this.label22.Text = "Мощные двигатели обладают большим объемом, \r\nно потребляют огромное количество то" +
-    "плива";
+    "плива. \r\nСредний объем двигателя - от 1.5 до 2.5 л\r\nУ электродвигателей объем 0 " +
+    "л";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox2
             // 
@@ -561,7 +569,7 @@
             // 
             this.label_ob.AutoSize = true;
             this.label_ob.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_ob.Location = new System.Drawing.Point(83, 167);
+            this.label_ob.Location = new System.Drawing.Point(113, 167);
             this.label_ob.Name = "label_ob";
             this.label_ob.Size = new System.Drawing.Size(491, 26);
             this.label_ob.TabIndex = 1;
@@ -723,38 +731,40 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(260, 389);
+            this.label19.Location = new System.Drawing.Point(195, 391);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(222, 17);
+            this.label19.Size = new System.Drawing.Size(226, 68);
             this.label19.TabIndex = 6;
-            this.label19.Text = "Самый популярный тип топлива";
+            this.label19.Text = "Самый популярный тип топлива.\r\nЛегко ремонтируется, \r\nоднако менее экономичен, \r\n" +
+    "чем дизель";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(495, 282);
+            this.label18.Location = new System.Drawing.Point(196, 262);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(132, 17);
+            this.label18.Size = new System.Drawing.Size(523, 68);
             this.label18.TabIndex = 5;
-            this.label18.Text = "Более экономичен";
+            this.label18.Text = resources.GetString("label18.Text");
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(88, 285);
+            this.label17.Location = new System.Drawing.Point(195, 122);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(151, 34);
+            this.label17.Size = new System.Drawing.Size(328, 68);
             this.label17.TabIndex = 4;
-            this.label17.Text = "Экологически чистый\r\n вид топлива";
+            this.label17.Text = "В качестве топлива использует электричество. \r\nОднако в нынешнее время из-за \r\nдо" +
+    "лгой зарядки и отсутствия зарядных станций\r\nв России брать не рекоммендуется\r\n";
             // 
             // button_engine_disel
             // 
             this.button_engine_disel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_engine_disel.Location = new System.Drawing.Point(485, 212);
+            this.button_engine_disel.Location = new System.Drawing.Point(7, 263);
             this.button_engine_disel.Name = "button_engine_disel";
-            this.button_engine_disel.Size = new System.Drawing.Size(155, 60);
+            this.button_engine_disel.Size = new System.Drawing.Size(165, 60);
             this.button_engine_disel.TabIndex = 3;
             this.button_engine_disel.Text = "Дизельный двигатель";
             this.button_engine_disel.UseVisualStyleBackColor = true;
@@ -763,9 +773,9 @@
             // button_engine_petrol
             // 
             this.button_engine_petrol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_engine_petrol.Location = new System.Drawing.Point(294, 307);
+            this.button_engine_petrol.Location = new System.Drawing.Point(7, 391);
             this.button_engine_petrol.Name = "button_engine_petrol";
-            this.button_engine_petrol.Size = new System.Drawing.Size(155, 60);
+            this.button_engine_petrol.Size = new System.Drawing.Size(165, 60);
             this.button_engine_petrol.TabIndex = 2;
             this.button_engine_petrol.Text = "Бензиновый двигатель";
             this.button_engine_petrol.UseVisualStyleBackColor = true;
@@ -774,7 +784,7 @@
             // button_engine_electro
             // 
             this.button_engine_electro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_engine_electro.Location = new System.Drawing.Point(91, 212);
+            this.button_engine_electro.Location = new System.Drawing.Point(7, 129);
             this.button_engine_electro.Name = "button_engine_electro";
             this.button_engine_electro.Size = new System.Drawing.Size(165, 60);
             this.button_engine_electro.TabIndex = 1;
@@ -786,7 +796,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(142, 134);
+            this.label2.Location = new System.Drawing.Point(157, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(410, 26);
             this.label2.TabIndex = 0;
@@ -825,9 +835,9 @@
             // 
             this.panel_startpage.Controls.Add(this.button_begin);
             this.panel_startpage.Controls.Add(this.label4);
-            this.panel_startpage.Location = new System.Drawing.Point(-2, -30);
+            this.panel_startpage.Location = new System.Drawing.Point(-5, -30);
             this.panel_startpage.Name = "panel_startpage";
-            this.panel_startpage.Size = new System.Drawing.Size(928, 524);
+            this.panel_startpage.Size = new System.Drawing.Size(931, 524);
             this.panel_startpage.TabIndex = 9;
             // 
             // button_begin

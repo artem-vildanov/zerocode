@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Тратит меньше топлива, чем бензиновый двигатель из-за чего меньше денег
+уходит на заправку, однако обычно дизельные автомобили стоят дороже,
+Выгодно для людей которые будут часто пользоваться автомобилем. Также
+медленно прогревается на холоде</value>
+  </data>
 </root>
