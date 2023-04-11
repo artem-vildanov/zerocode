@@ -379,10 +379,6 @@ namespace zerocode
             TAZ.fuel = "Дизель";
         }
 
-        private void button_begin_Click(object sender, EventArgs e)
-        {
-            panel_startpage.Visible = false;
-        }
 
         private void button_kpp_m_Click(object sender, EventArgs e)
         {
@@ -467,6 +463,30 @@ namespace zerocode
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void button_begin_Click_1(object sender, EventArgs e)
+        {
+            panel_startpage.Visible = false;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)//пропустить изменения
+        {
+            panel_price.Visible = true;
+            panel_kpp.Visible = false;
+            panel_rul.Visible = false;
+            panel_privod.Visible = false;
+            panel_obyom.Visible = false;
+            panel_kuzov.Visible = false;
+            panel_engine.Visible = false;
+            panel_output_res.Visible = false;
+            panel1.Visible = false;
         }
     }
 }
