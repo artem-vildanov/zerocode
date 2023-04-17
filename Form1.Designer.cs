@@ -896,7 +896,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(414, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 26);
+            this.label4.Size = new System.Drawing.Size(103, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "Привет";
             // 
@@ -950,7 +950,7 @@
             this.label28.Font = new System.Drawing.Font("Sitka Display", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label28.Location = new System.Drawing.Point(147, 42);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(488, 60);
+            this.label28.Size = new System.Drawing.Size(564, 70);
             this.label28.TabIndex = 5;
             this.label28.Text = "ОТветьте на вопросы пожалуйста если не хотите\r\n         отвечать не отвечайте спа" +
     "сибо";
@@ -961,7 +961,7 @@
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label25.Location = new System.Drawing.Point(132, 209);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(221, 16);
+            this.label25.Size = new System.Drawing.Size(236, 18);
             this.label25.TabIndex = 2;
             this.label25.Text = "как часто вы будете кататся";
             // 
@@ -971,7 +971,7 @@
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label23.Location = new System.Drawing.Point(132, 153);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(182, 16);
+            this.label23.Size = new System.Drawing.Size(194, 18);
             this.label23.TabIndex = 0;
             this.label23.Text = "где вы будете кататься";
             // 
