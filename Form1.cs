@@ -527,7 +527,7 @@ namespace zerocode
             {
                 case "волнует":
                     Random rnd = new Random();
-                    int value = rnd.Next(0, 1);
+                    int value = rnd.Next(0, 2);
 
                     if (value == 0) TAZ.body = "Универсал";
                     else TAZ.body = "Минивэн";
