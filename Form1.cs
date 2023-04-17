@@ -134,7 +134,7 @@ namespace zerocode
 
             bool isExpert;
             string query;
-            if(UserChoice == "ЭКСПЕРТНЫЙ ПОДБОР")
+            if (UserChoice == "ЭКСПЕРТНЫЙ ПОДБОР")
             {
                 isExpert = true;
                 query =
@@ -181,7 +181,7 @@ namespace zerocode
 
             if (!isExpert)
             {
-                
+
 
                 command.Parameters.AddWithValue("@minPrice", TAZ.minPrice);
                 command.Parameters.AddWithValue("@maxPrice", TAZ.maxPrice);
@@ -234,7 +234,7 @@ namespace zerocode
 
             while (reader.Read())
             {
-                if(flag)
+                if (flag)
                 {
                     richTextBox1.Text += "================МЫ РЕКОМЕНДУЕМ================\n";
                     richTextBox1.Text += reader[0] + " " + reader[1] + "\n"
@@ -252,12 +252,12 @@ namespace zerocode
                     + reader[3] + " л (" + reader[4] + " л.с.), "
                     + reader[5] + ", " + reader[6] + ", " + reader[7] + ", " + reader[8] + ", " + reader[9] + ", " + reader[2] + " руб.\n\n";
                 }
-                
+
             }
 
             if (richTextBox1.Text == ("ВАШ ВЫБОР:\n" + UserChoice + "\n\n"))
                 richTextBox1.Text += "ПО ЗАДАННЫМ КРИТЕРИЯМ НИЧЕГО НЕ НАЙДЕНО!";
-}
+        }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -317,7 +317,7 @@ namespace zerocode
             panel_output_res.Visible = false;
 
 
-            
+
         }
 
 
@@ -423,8 +423,8 @@ namespace zerocode
                 TAZ.minPrice = Convert.ToInt32(min_text_box.Text);
                 TAZ.maxPrice = Convert.ToInt32(max_text_box.Text);
             }
-            
-            catch 
+
+            catch
             {
                 MessageBox.Show("Неверный ввод диапазона");
             }
@@ -450,21 +450,6 @@ namespace zerocode
             }
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void button_begin_Click_1(object sender, EventArgs e)
         {
@@ -472,11 +457,6 @@ namespace zerocode
         }
 
         private void button4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)//пропустить изменения
         {
             panel_price.Visible = true;
             panel_kpp.Visible = false;
@@ -489,9 +469,72 @@ namespace zerocode
             panel1.Visible = false;
         }
 
-      private void panel1_Paint(object sender, PaintEventArgs e)
+        private void button2_Click_1(object sender, EventArgs e) //кнопка применить измен
         {
+            panel_price.Visible = true;
+            panel_kpp.Visible = false;
+            panel_rul.Visible = false;
+            panel_privod.Visible = false;
+            panel_obyom.Visible = false;
+            panel_kuzov.Visible = false;
+            panel_engine.Visible = false;
+            panel_output_res.Visible = false;
+            panel1.Visible = false;
 
-        }  
+            switch (listBox1.SelectedItem) //где вы будете кататься
+            {
+                case "город":
+                    TAZ.GB = "Автомат";
+                    break;
+
+                case "проселочные дороги":
+                    TAZ.privod = "4WD";
+                    TAZ.body = "Джип";
+                    break;
+
+                    //default:
+                    //    break;
+            }
+
+            switch (listBox2.SelectedItem) //вместимость машины
+            {
+                case "20 - 30 лет":
+                    TAZ.minPrice = 200000;
+                    TAZ.maxPrice = 500000;
+                    break;
+
+                case "30 - 50 лет":
+                    TAZ.minPrice = 500000;
+                    TAZ.maxPrice = 2000000;
+                    break;
+
+                case "50 и более":
+                    TAZ.minPrice = 100000;
+                    TAZ.maxPrice = 300000;
+                    break;
+
+
+            }
+
+            switch (listBox3.SelectedItem) //качество дороги
+            {
+                case "плохое":
+                    TAZ.privod = "4WD";
+                    break;
+            }
+
+            switch (listBox4.SelectedItem) //возраст
+            {
+                case "волнует":
+                    Random rnd = new Random();
+                    int value = rnd.Next(0, 1);
+
+                    if (value == 0) TAZ.body = "Универсал";
+                    else TAZ.body = "Минивэн";
+
+                    break;
+            }
+
+        }
     }
 }
