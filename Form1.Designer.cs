@@ -97,21 +97,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_startpage = new System.Windows.Forms.Panel();
+            this.button_begin = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button_begin = new System.Windows.Forms.Button();
-            this.panel_startpage = new System.Windows.Forms.Panel();
             this.menu_panel.SuspendLayout();
             this.panel_price.SuspendLayout();
             this.panel_kpp.SuspendLayout();
@@ -122,8 +122,8 @@
             this.panel_engine.SuspendLayout();
             this.panel_output_res.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_startpage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menu_panel
@@ -866,6 +866,101 @@
             this.panel1.Size = new System.Drawing.Size(933, 524);
             this.panel1.TabIndex = 9;
             // 
+            // panel_startpage
+            // 
+            this.panel_startpage.Controls.Add(this.button_begin);
+            this.panel_startpage.Controls.Add(this.label4);
+            this.panel_startpage.Location = new System.Drawing.Point(854, 0);
+            this.panel_startpage.Name = "panel_startpage";
+            this.panel_startpage.Size = new System.Drawing.Size(81, 521);
+            this.panel_startpage.TabIndex = 15;
+            // 
+            // button_begin
+            // 
+            this.button_begin.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_begin.Location = new System.Drawing.Point(330, 271);
+            this.button_begin.Name = "button_begin";
+            this.button_begin.Size = new System.Drawing.Size(281, 114);
+            this.button_begin.TabIndex = 1;
+            this.button_begin.Text = "привет";
+            this.button_begin.UseVisualStyleBackColor = true;
+            this.button_begin.Click += new System.EventHandler(this.button_begin_Click_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(414, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 26);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Привет";
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Items.AddRange(new object[] {
+            "20 - 30 лет",
+            "30 - 50 лет",
+            "50 и более"});
+            this.listBox2.Location = new System.Drawing.Point(374, 205);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(150, 43);
+            this.listBox2.TabIndex = 23;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Items.AddRange(new object[] {
+            "волнует",
+            "не волнует"});
+            this.listBox4.Location = new System.Drawing.Point(374, 330);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(150, 43);
+            this.listBox4.TabIndex = 22;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(50, 349);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(292, 16);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "вас волнует вместимость автомобиля";
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Items.AddRange(new object[] {
+            "плохое",
+            "умеренное",
+            "хорошее"});
+            this.listBox3.Location = new System.Drawing.Point(374, 265);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(150, 43);
+            this.listBox3.TabIndex = 20;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label25.Location = new System.Drawing.Point(95, 276);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(234, 16);
+            this.label25.TabIndex = 19;
+            this.label25.Text = "качество дорожного покрытия\r\n";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label24.Location = new System.Drawing.Point(168, 216);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(100, 16);
+            this.label24.TabIndex = 17;
+            this.label24.Text = "ваш возраст\r\n";
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(342, 419);
@@ -897,7 +992,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(150, 43);
             this.listBox1.TabIndex = 7;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged_1);
             // 
             // label28
             // 
@@ -905,7 +999,7 @@
             this.label28.Font = new System.Drawing.Font("Sitka Display", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label28.Location = new System.Drawing.Point(147, 42);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(564, 70);
+            this.label28.Size = new System.Drawing.Size(487, 60);
             this.label28.TabIndex = 5;
             this.label28.Text = "ОТветьте на вопросы пожалуйста если не хотите\r\n         отвечать не отвечайте спа" +
     "сибо";
@@ -916,7 +1010,7 @@
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label23.Location = new System.Drawing.Point(132, 153);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(194, 18);
+            this.label23.Size = new System.Drawing.Size(182, 16);
             this.label23.TabIndex = 0;
             this.label23.Text = "где вы будете кататься";
             // 
@@ -929,104 +1023,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(168, 216);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(106, 18);
-            this.label24.TabIndex = 17;
-            this.label24.Text = "ваш возраст\r\n";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(95, 276);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(252, 18);
-            this.label25.TabIndex = 19;
-            this.label25.Text = "качество дорожного покрытия\r\n";
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Items.AddRange(new object[] {
-            "плохое ",
-            "умеренное",
-            "хорошее"});
-            this.listBox3.Location = new System.Drawing.Point(374, 265);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(150, 43);
-            this.listBox3.TabIndex = 20;
-            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged_1);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label26.Location = new System.Drawing.Point(50, 349);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(313, 18);
-            this.label26.TabIndex = 21;
-            this.label26.Text = "вас волнует вместимость автомобиля";
-            // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Items.AddRange(new object[] {
-            "волнует",
-            "не волнует"});
-            this.listBox4.Location = new System.Drawing.Point(374, 330);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(150, 43);
-            this.listBox4.TabIndex = 22;
-            this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Items.AddRange(new object[] {
-            "20 - 30 лет",
-            "30 - 50 лет",
-            "50 и более"});
-            this.listBox2.Location = new System.Drawing.Point(374, 205);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(150, 43);
-            this.listBox2.TabIndex = 23;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(414, 175);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 29);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Привет";
-            // 
-            // button_begin
-            // 
-            this.button_begin.Font = new System.Drawing.Font("Microsoft Sans Serif", 23.77358F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_begin.Location = new System.Drawing.Point(330, 271);
-            this.button_begin.Name = "button_begin";
-            this.button_begin.Size = new System.Drawing.Size(281, 114);
-            this.button_begin.TabIndex = 1;
-            this.button_begin.Text = "привет";
-            this.button_begin.UseVisualStyleBackColor = true;
-            this.button_begin.Click += new System.EventHandler(this.button_begin_Click_1);
-            // 
-            // panel_startpage
-            // 
-            this.panel_startpage.Controls.Add(this.button_begin);
-            this.panel_startpage.Controls.Add(this.label4);
-            this.panel_startpage.Location = new System.Drawing.Point(0, 0);
-            this.panel_startpage.Name = "panel_startpage";
-            this.panel_startpage.Size = new System.Drawing.Size(935, 521);
-            this.panel_startpage.TabIndex = 15;
             // 
             // car_choose
             // 
@@ -1067,9 +1063,9 @@
             this.panel_output_res.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_startpage.ResumeLayout(false);
             this.panel_startpage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

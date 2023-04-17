@@ -469,7 +469,7 @@ namespace zerocode
             panel1.Visible = false;
         }
 
-        private void button2_Click_1(object sender, EventArgs e)//пропустить изменения
+        private void button2_Click_1(object sender, EventArgs e) //кнопка применить измен
         {
             panel_price.Visible = true;
             panel_kpp.Visible = false;
@@ -481,7 +481,7 @@ namespace zerocode
             panel_output_res.Visible = false;
             panel1.Visible = false;
 
-            switch(listBox1.SelectedItem)
+            switch(listBox1.SelectedItem) //где вы будете кататься
             {
                 case "город":
                     TAZ.GB = "Автомат";
@@ -496,25 +496,44 @@ namespace zerocode
                 //    break;
             }
 
-        }
+            switch (listBox2.SelectedItem) //вместимость машины
+            {
+                case "20 - 30 лет":
+                    TAZ.minPrice = 200000;
+                    TAZ.maxPrice = 500000;
+                    break;
 
-        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)//где вы будете кататься
-        {
+                case "30 - 50 лет":
+                    TAZ.minPrice = 500000;
+                    TAZ.maxPrice = 2000000;
+                    break;
 
-        }
+                case "50 и более":
+                    TAZ.minPrice = 100000;
+                    TAZ.maxPrice = 300000;
+                    break;
 
-        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)//вместимость машины
-        {
+ 
+            }
 
-        }
+            switch(listBox3.SelectedItem) //качество дороги
+            {
+                case "плохое":
+                    TAZ.privod = "4WD";
+                    break;
+            }
 
-        private void listBox3_SelectedIndexChanged_1(object sender, EventArgs e)//качество дороги
-        {
+            switch(listBox4.SelectedItem) //возраст
+            {
+                case "волнует":
+                    Random rnd = new Random();
+                    int value = rnd.Next(0, 1);
 
-        }
+                    if (value == 0) TAZ.body = "Универсал";
+                    else TAZ.body = "Минивэн";
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)//возраст
-        {
+                    break;
+            }
 
         }
     }
