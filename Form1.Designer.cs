@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(car_choose));
             this.menu_panel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.engine_but = new System.Windows.Forms.Button();
             this.output_res_but = new System.Windows.Forms.Button();
             this.kuzov_but = new System.Windows.Forms.Button();
@@ -101,16 +100,16 @@
             this.panel_startpage = new System.Windows.Forms.Panel();
             this.button_begin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label28 = new System.Windows.Forms.Label();
+            this.listBox4 = new System.Windows.Forms.ListBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menu_panel.SuspendLayout();
@@ -123,14 +122,12 @@
             this.panel_engine.SuspendLayout();
             this.panel_output_res.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_startpage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menu_panel
             // 
-            this.menu_panel.Controls.Add(this.button1);
             this.menu_panel.Controls.Add(this.engine_but);
             this.menu_panel.Controls.Add(this.output_res_but);
             this.menu_panel.Controls.Add(this.kuzov_but);
@@ -144,21 +141,11 @@
             this.menu_panel.Size = new System.Drawing.Size(192, 524);
             this.menu_panel.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(42, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 92);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "батон\r\n один нажми\r\n меня";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // engine_but
             // 
-            this.engine_but.Location = new System.Drawing.Point(17, 433);
+            this.engine_but.Location = new System.Drawing.Point(17, 342);
             this.engine_but.Name = "engine_but";
-            this.engine_but.Size = new System.Drawing.Size(168, 27);
+            this.engine_but.Size = new System.Drawing.Size(156, 40);
             this.engine_but.TabIndex = 8;
             this.engine_but.Text = "Тип двигателя";
             this.engine_but.UseVisualStyleBackColor = true;
@@ -166,9 +153,9 @@
             // 
             // output_res_but
             // 
-            this.output_res_but.Location = new System.Drawing.Point(42, 466);
+            this.output_res_but.Location = new System.Drawing.Point(17, 413);
             this.output_res_but.Name = "output_res_but";
-            this.output_res_but.Size = new System.Drawing.Size(106, 40);
+            this.output_res_but.Size = new System.Drawing.Size(156, 75);
             this.output_res_but.TabIndex = 7;
             this.output_res_but.Text = "Вывести результаты";
             this.output_res_but.UseVisualStyleBackColor = true;
@@ -176,9 +163,9 @@
             // 
             // kuzov_but
             // 
-            this.kuzov_but.Location = new System.Drawing.Point(17, 377);
+            this.kuzov_but.Location = new System.Drawing.Point(17, 298);
             this.kuzov_but.Name = "kuzov_but";
-            this.kuzov_but.Size = new System.Drawing.Size(156, 50);
+            this.kuzov_but.Size = new System.Drawing.Size(156, 38);
             this.kuzov_but.TabIndex = 6;
             this.kuzov_but.Text = "Тип кузова";
             this.kuzov_but.UseVisualStyleBackColor = true;
@@ -186,9 +173,9 @@
             // 
             // obyom_but
             // 
-            this.obyom_but.Location = new System.Drawing.Point(36, 344);
+            this.obyom_but.Location = new System.Drawing.Point(17, 252);
             this.obyom_but.Name = "obyom_but";
-            this.obyom_but.Size = new System.Drawing.Size(137, 27);
+            this.obyom_but.Size = new System.Drawing.Size(156, 40);
             this.obyom_but.TabIndex = 5;
             this.obyom_but.Text = "Объем двигателя";
             this.obyom_but.UseVisualStyleBackColor = true;
@@ -196,9 +183,9 @@
             // 
             // privod_but
             // 
-            this.privod_but.Location = new System.Drawing.Point(28, 267);
+            this.privod_but.Location = new System.Drawing.Point(17, 205);
             this.privod_but.Name = "privod_but";
-            this.privod_but.Size = new System.Drawing.Size(120, 67);
+            this.privod_but.Size = new System.Drawing.Size(156, 41);
             this.privod_but.TabIndex = 4;
             this.privod_but.Text = "Привод";
             this.privod_but.UseVisualStyleBackColor = true;
@@ -206,9 +193,9 @@
             // 
             // rul_but
             // 
-            this.rul_but.Location = new System.Drawing.Point(17, 228);
+            this.rul_but.Location = new System.Drawing.Point(17, 160);
             this.rul_but.Name = "rul_but";
-            this.rul_but.Size = new System.Drawing.Size(111, 32);
+            this.rul_but.Size = new System.Drawing.Size(156, 39);
             this.rul_but.TabIndex = 3;
             this.rul_but.Text = "Левый/правый руль";
             this.rul_but.UseVisualStyleBackColor = true;
@@ -216,9 +203,9 @@
             // 
             // kpp_but
             // 
-            this.kpp_but.Location = new System.Drawing.Point(29, 175);
+            this.kpp_but.Location = new System.Drawing.Point(17, 115);
             this.kpp_but.Name = "kpp_but";
-            this.kpp_but.Size = new System.Drawing.Size(156, 47);
+            this.kpp_but.Size = new System.Drawing.Size(156, 39);
             this.kpp_but.TabIndex = 2;
             this.kpp_but.Text = "Коробка передач";
             this.kpp_but.UseVisualStyleBackColor = true;
@@ -226,9 +213,9 @@
             // 
             // price_but
             // 
-            this.price_but.Location = new System.Drawing.Point(17, 140);
+            this.price_but.Location = new System.Drawing.Point(17, 69);
             this.price_but.Name = "price_but";
-            this.price_but.Size = new System.Drawing.Size(52, 29);
+            this.price_but.Size = new System.Drawing.Size(156, 40);
             this.price_but.TabIndex = 1;
             this.price_but.Text = "Цена";
             this.price_but.UseVisualStyleBackColor = true;
@@ -862,31 +849,30 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.panel_startpage);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.listBox3);
             this.panel1.Controls.Add(this.listBox2);
-            this.panel1.Controls.Add(this.listBox1);
-            this.panel1.Controls.Add(this.label28);
+            this.panel1.Controls.Add(this.listBox4);
             this.panel1.Controls.Add(this.label26);
+            this.panel1.Controls.Add(this.listBox3);
             this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.listBox1);
+            this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-5, -30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(933, 524);
             this.panel1.TabIndex = 9;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel_startpage
             // 
             this.panel_startpage.Controls.Add(this.button_begin);
             this.panel_startpage.Controls.Add(this.label4);
-            this.panel_startpage.Location = new System.Drawing.Point(0, 0);
+            this.panel_startpage.Location = new System.Drawing.Point(854, 0);
             this.panel_startpage.Name = "panel_startpage";
-            this.panel_startpage.Size = new System.Drawing.Size(935, 524);
+            this.panel_startpage.Size = new System.Drawing.Size(81, 521);
             this.panel_startpage.TabIndex = 15;
             // 
             // button_begin
@@ -906,13 +892,78 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(414, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 29);
+            this.label4.Size = new System.Drawing.Size(92, 26);
             this.label4.TabIndex = 0;
             this.label4.Text = "Привет";
             // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Items.AddRange(new object[] {
+            "20 - 30 лет",
+            "30 - 50 лет",
+            "50 и более"});
+            this.listBox2.Location = new System.Drawing.Point(374, 205);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(150, 43);
+            this.listBox2.TabIndex = 23;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Items.AddRange(new object[] {
+            "волнует",
+            "не волнует"});
+            this.listBox4.Location = new System.Drawing.Point(374, 330);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(150, 43);
+            this.listBox4.TabIndex = 22;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(50, 349);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(292, 16);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "вас волнует вместимость автомобиля";
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Items.AddRange(new object[] {
+            "плохое",
+            "умеренное",
+            "хорошее"});
+            this.listBox3.Location = new System.Drawing.Point(374, 265);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(150, 43);
+            this.listBox3.TabIndex = 20;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label25.Location = new System.Drawing.Point(95, 276);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(234, 16);
+            this.label25.TabIndex = 19;
+            this.label25.Text = "качество дорожного покрытия\r\n";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label24.Location = new System.Drawing.Point(168, 216);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(100, 16);
+            this.label24.TabIndex = 17;
+            this.label24.Text = "ваш возраст\r\n";
+            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(369, 391);
+            this.button4.Location = new System.Drawing.Point(342, 419);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 51);
             this.button4.TabIndex = 14;
@@ -922,46 +973,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(135, 409);
+            this.button2.Location = new System.Drawing.Point(171, 419);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 51);
             this.button2.TabIndex = 12;
             this.button2.Text = "применить изменения";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(309, 337);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 20);
-            this.textBox3.TabIndex = 10;
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Items.AddRange(new object[] {
-            "0-18",
-            "18-29",
-            "29-49",
-            "49---"});
-            this.listBox3.Location = new System.Drawing.Point(289, 260);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(150, 56);
-            this.listBox3.TabIndex = 9;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Items.AddRange(new object[] {
-            "часто",
-            "не очень часто",
-            "не часто"});
-            this.listBox2.Location = new System.Drawing.Point(374, 211);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(150, 43);
-            this.listBox2.TabIndex = 8;
             // 
             // listBox1
             // 
@@ -970,7 +988,7 @@
             "город",
             "проселочные дороги",
             "и то, и то"});
-            this.listBox1.Location = new System.Drawing.Point(280, 144);
+            this.listBox1.Location = new System.Drawing.Point(374, 140);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(150, 43);
             this.listBox1.TabIndex = 7;
@@ -981,48 +999,18 @@
             this.label28.Font = new System.Drawing.Font("Sitka Display", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label28.Location = new System.Drawing.Point(147, 42);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(564, 70);
+            this.label28.Size = new System.Drawing.Size(487, 60);
             this.label28.TabIndex = 5;
             this.label28.Text = "ОТветьте на вопросы пожалуйста если не хотите\r\n         отвечать не отвечайте спа" +
     "сибо";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label26.Location = new System.Drawing.Point(148, 336);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(135, 18);
-            this.label26.TabIndex = 3;
-            this.label26.Text = "цвет ваших глаз";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label25.Location = new System.Drawing.Point(132, 219);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(236, 18);
-            this.label25.TabIndex = 2;
-            this.label25.Text = "как часто вы будете кататся";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label24.Location = new System.Drawing.Point(112, 280);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(151, 18);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "сколько у вас лет";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.Location = new System.Drawing.Point(78, 156);
+            this.label23.Location = new System.Drawing.Point(132, 153);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(194, 18);
+            this.label23.Size = new System.Drawing.Size(182, 16);
             this.label23.TabIndex = 0;
             this.label23.Text = "где вы будете кататься";
             // 
@@ -1151,23 +1139,22 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button price_confirm;
         private System.Windows.Forms.Button obyom_confirm;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Panel panel_startpage;
         private System.Windows.Forms.Button button_begin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
