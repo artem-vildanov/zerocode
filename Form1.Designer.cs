@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(car_choose));
             this.menu_panel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.engine_but = new System.Windows.Forms.Button();
             this.output_res_but = new System.Windows.Forms.Button();
             this.kuzov_but = new System.Windows.Forms.Button();
@@ -125,7 +124,6 @@
             // 
             // menu_panel
             // 
-            this.menu_panel.Controls.Add(this.button1);
             this.menu_panel.Controls.Add(this.engine_but);
             this.menu_panel.Controls.Add(this.output_res_but);
             this.menu_panel.Controls.Add(this.kuzov_but);
@@ -139,21 +137,11 @@
             this.menu_panel.Size = new System.Drawing.Size(192, 524);
             this.menu_panel.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(42, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 92);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "батон\r\n один нажми\r\n меня";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // engine_but
             // 
-            this.engine_but.Location = new System.Drawing.Point(17, 433);
+            this.engine_but.Location = new System.Drawing.Point(17, 342);
             this.engine_but.Name = "engine_but";
-            this.engine_but.Size = new System.Drawing.Size(168, 27);
+            this.engine_but.Size = new System.Drawing.Size(156, 40);
             this.engine_but.TabIndex = 8;
             this.engine_but.Text = "Тип двигателя";
             this.engine_but.UseVisualStyleBackColor = true;
@@ -161,9 +149,9 @@
             // 
             // output_res_but
             // 
-            this.output_res_but.Location = new System.Drawing.Point(42, 466);
+            this.output_res_but.Location = new System.Drawing.Point(17, 413);
             this.output_res_but.Name = "output_res_but";
-            this.output_res_but.Size = new System.Drawing.Size(106, 40);
+            this.output_res_but.Size = new System.Drawing.Size(156, 75);
             this.output_res_but.TabIndex = 7;
             this.output_res_but.Text = "Вывести результаты";
             this.output_res_but.UseVisualStyleBackColor = true;
@@ -171,9 +159,9 @@
             // 
             // kuzov_but
             // 
-            this.kuzov_but.Location = new System.Drawing.Point(17, 377);
+            this.kuzov_but.Location = new System.Drawing.Point(17, 298);
             this.kuzov_but.Name = "kuzov_but";
-            this.kuzov_but.Size = new System.Drawing.Size(156, 50);
+            this.kuzov_but.Size = new System.Drawing.Size(156, 38);
             this.kuzov_but.TabIndex = 6;
             this.kuzov_but.Text = "Тип кузова";
             this.kuzov_but.UseVisualStyleBackColor = true;
@@ -181,9 +169,9 @@
             // 
             // obyom_but
             // 
-            this.obyom_but.Location = new System.Drawing.Point(36, 344);
+            this.obyom_but.Location = new System.Drawing.Point(17, 252);
             this.obyom_but.Name = "obyom_but";
-            this.obyom_but.Size = new System.Drawing.Size(137, 27);
+            this.obyom_but.Size = new System.Drawing.Size(156, 40);
             this.obyom_but.TabIndex = 5;
             this.obyom_but.Text = "Объем двигателя";
             this.obyom_but.UseVisualStyleBackColor = true;
@@ -191,9 +179,9 @@
             // 
             // privod_but
             // 
-            this.privod_but.Location = new System.Drawing.Point(28, 267);
+            this.privod_but.Location = new System.Drawing.Point(17, 205);
             this.privod_but.Name = "privod_but";
-            this.privod_but.Size = new System.Drawing.Size(120, 67);
+            this.privod_but.Size = new System.Drawing.Size(156, 41);
             this.privod_but.TabIndex = 4;
             this.privod_but.Text = "Привод";
             this.privod_but.UseVisualStyleBackColor = true;
@@ -201,9 +189,9 @@
             // 
             // rul_but
             // 
-            this.rul_but.Location = new System.Drawing.Point(17, 228);
+            this.rul_but.Location = new System.Drawing.Point(17, 160);
             this.rul_but.Name = "rul_but";
-            this.rul_but.Size = new System.Drawing.Size(111, 32);
+            this.rul_but.Size = new System.Drawing.Size(156, 39);
             this.rul_but.TabIndex = 3;
             this.rul_but.Text = "Левый/правый руль";
             this.rul_but.UseVisualStyleBackColor = true;
@@ -211,9 +199,9 @@
             // 
             // kpp_but
             // 
-            this.kpp_but.Location = new System.Drawing.Point(29, 175);
+            this.kpp_but.Location = new System.Drawing.Point(17, 115);
             this.kpp_but.Name = "kpp_but";
-            this.kpp_but.Size = new System.Drawing.Size(156, 47);
+            this.kpp_but.Size = new System.Drawing.Size(156, 39);
             this.kpp_but.TabIndex = 2;
             this.kpp_but.Text = "Коробка передач";
             this.kpp_but.UseVisualStyleBackColor = true;
@@ -221,9 +209,9 @@
             // 
             // price_but
             // 
-            this.price_but.Location = new System.Drawing.Point(17, 140);
+            this.price_but.Location = new System.Drawing.Point(17, 69);
             this.price_but.Name = "price_but";
-            this.price_but.Size = new System.Drawing.Size(52, 29);
+            this.price_but.Size = new System.Drawing.Size(156, 40);
             this.price_but.TabIndex = 1;
             this.price_but.Text = "Цена";
             this.price_but.UseVisualStyleBackColor = true;
@@ -874,9 +862,9 @@
             // 
             this.panel_startpage.Controls.Add(this.button_begin);
             this.panel_startpage.Controls.Add(this.label4);
-            this.panel_startpage.Location = new System.Drawing.Point(848, 0);
+            this.panel_startpage.Location = new System.Drawing.Point(0, 0);
             this.panel_startpage.Name = "panel_startpage";
-            this.panel_startpage.Size = new System.Drawing.Size(87, 524);
+            this.panel_startpage.Size = new System.Drawing.Size(935, 521);
             this.panel_startpage.TabIndex = 15;
             // 
             // button_begin
@@ -1100,7 +1088,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Button price_confirm;
         private System.Windows.Forms.Button obyom_confirm;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
