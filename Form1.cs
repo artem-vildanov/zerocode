@@ -450,21 +450,6 @@ namespace zerocode
             }
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void button_begin_Click_1(object sender, EventArgs e)
         {
@@ -513,5 +498,24 @@ namespace zerocode
 
         }
 
+        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)//где вы будете кататься
+        {
+
+        }
+
+        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)//вместимость машины
+        {
+
+        }
+
+        private void listBox3_SelectedIndexChanged_1(object sender, EventArgs e)//качество дороги
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)//возраст
+        {
+
+        }
     }
 }
