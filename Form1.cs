@@ -473,7 +473,15 @@ namespace zerocode
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-
+            panel_price.Visible = true;
+            panel_kpp.Visible = false;
+            panel_rul.Visible = false;
+            panel_privod.Visible = false;
+            panel_obyom.Visible = false;
+            panel_kuzov.Visible = false;
+            panel_engine.Visible = false;
+            panel_output_res.Visible = false;
+            panel1.Visible = false;
         }
 
         private void button2_Click_1(object sender, EventArgs e)//пропустить изменения
@@ -487,6 +495,23 @@ namespace zerocode
             panel_engine.Visible = false;
             panel_output_res.Visible = false;
             panel1.Visible = false;
+
+            switch(listBox1.SelectedItem)
+            {
+                case "город":
+                    TAZ.GB = "Автомат";
+                    break;
+
+                case "проселочные дороги":
+                    TAZ.privod = "4WD";
+                    TAZ.body = "Джип";
+                    break;
+
+                //default:
+                //    break;
+            }
+
+
         }
 
     }
