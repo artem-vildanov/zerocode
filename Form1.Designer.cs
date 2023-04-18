@@ -439,10 +439,10 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.Location = new System.Drawing.Point(352, 189);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(277, 54);
+            this.label11.Size = new System.Drawing.Size(336, 54);
             this.label11.TabIndex = 6;
-            this.label11.Text = "Комфортнее и удобнее для новичков.\r\nОн безопаснее и проще в управлении \r\nдаже без" +
-    " электронных помощников.\r\n";
+            this.label11.Text = "Прекрасно подходит для\r\nвождения в условиях пересеченной местности\r\nПреимуществен" +
+    "но актуален для джипов\r\n";
             // 
             // label10
             // 
